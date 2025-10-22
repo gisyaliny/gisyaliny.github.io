@@ -1,0 +1,5 @@
+Maxwell, A. E., Farhadpour, S., Das, S., & Yang, Y. (2024). geodl: An R package for geospatial deep learning semantic segmentation using torch and terra. PLoS One, 19(12), e0315127.
+Yang, Y., Wu, Y., & Yuan, M. (2024). What Local Environments Drive Opportunities for Social Events? A New Approach Based on Bayesian Modeling in Dallas, Texas, USA. ISPRS International Journal of Geo-Information, 13(3), 81.
+Griffith, D. A., Conway, C., Gamarra, A., Hutchison, M., Kim, D., & Yang, Y. (2025). Political Districts Versus Customized Polygons: Implementing Geographic Tessellation Stratified Random Sampling. Transactions in GIS, 29(2), e70019.
+Wu, Y., Yang, Y., & Yuan, M. (2024). Location Analytics of Routine Occurrences (LARO) to Identify Locations with Regularly Occurring Events with a Case Study on Traffic Accidents. Information, 15(2), 107.
+Wu, Y., Yang, Y., & Yuan, M. (2023). Understanding the role of geographical environments in emergency dispatches with GPS trajectories. Abstracts of the ICA, 6, 276.
