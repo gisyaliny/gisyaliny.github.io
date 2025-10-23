@@ -214,10 +214,16 @@ def extract_grants_awards(html_content):
             award_match = re.search(award_pattern, li_content)
             award_name = award_match.group(1).strip() if award_match else 'Unknown Award'
             
-            # Extract organization (text after the link)
+            # Extract organization (text after the link, clean up formatting)
             org_pattern = r'</a>\s*([^<]+)'
             org_match = re.search(org_pattern, li_content)
-            organization = org_match.group(1).strip() if org_match else 'Unknown Organization'
+            if org_match:
+                organization = org_match.group(1).strip()
+                # Clean up any leading commas or spaces
+                organization = re.sub(r'^,\s*', '', organization)
+                organization = re.sub(r'^\s+', '', organization)
+            else:
+                organization = 'Unknown Organization'
             
             grants_awards.append({
                 'year': year,
@@ -271,6 +277,7 @@ def generate_cv_html(personal_info, education, appointments, publications, grant
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - {personal_info.get('name', 'Yalin Yang')}</title>
+    <link rel="icon" type="image/x-icon" href="/img/YalinYang.ico">
     <style>
         body {{
             font-family: Arial, sans-serif;
