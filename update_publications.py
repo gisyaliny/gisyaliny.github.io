@@ -9,37 +9,66 @@ import os
 def parse_publication(publication_text):
     """
     Parse a publication entry and extract components
-    Format: Authors (Year). Title. Journal, Volume(Issue), Pages.
+    Handles both journal articles and thesis formats
     """
-    # Pattern to match the publication format
-    pattern = r'^(.+?)\s+\((\d{4})\)\.\s+(.+?)\.\s+(.+?),\s+(\d+)(?:\((\d+)\))?,\s+(.+?)\.$'
+    text = publication_text.strip()
     
-    match = re.match(pattern, publication_text.strip())
-    if not match:
-        print(f"Warning: Could not parse publication: {publication_text}")
-        return None
+    # Pattern 1: Journal articles with volume, issue, pages
+    # Format: Authors (Year). Title. Journal, Volume(Issue), Pages.
+    journal_pattern = r'^(.+?)\s+\((\d{4})\)\.\s+(.+?)\.\s+(.+?),\s+(\d+)(?:\((\d+)\))?,\s+(.+?)\.$'
     
-    authors, year, title, journal, volume, issue, pages = match.groups()
+    # Pattern 2: Thesis format
+    # Format: Authors (Year). Title (Master's thesis, Institution).
+    thesis_pattern = r'^(.+?)\s+\((\d{4})\)\.\s+(.+?)\s+\(Master\'s thesis,\s+(.+?)\)\.$'
     
-    # Bold Yang, Y. in authors list
-    authors_bold = re.sub(r'\bYang, Y\.', '<b>Yang, Y.</b>', authors)
+    # Try journal article pattern first
+    match = re.match(journal_pattern, text)
+    if match:
+        authors, year, title, journal, volume, issue, pages = match.groups()
+        
+        # Bold Yang, Y. in authors list
+        authors_bold = re.sub(r'\bYang, Y\.', '<b>Yang, Y.</b>', authors)
+        
+        # Create DOI URL if it's a DOI format
+        doi_url = None
+        if "e" in pages and pages.startswith("e"):
+            # This looks like a DOI
+            doi_url = f"https://doi.org/{pages}"
+        
+        return {
+            'authors': authors_bold,
+            'year': int(year),
+            'title': title,
+            'journal': journal,
+            'volume': volume,
+            'issue': issue,
+            'pages': pages,
+            'doi_url': doi_url,
+            'type': 'journal'
+        }
     
-    # Create DOI URL if it's a DOI format
-    doi_url = None
-    if "e" in pages and pages.startswith("e"):
-        # This looks like a DOI
-        doi_url = f"https://doi.org/{pages}"
+    # Try thesis pattern
+    match = re.match(thesis_pattern, text)
+    if match:
+        authors, year, title, institution = match.groups()
+        
+        # Bold Yang, Y. in authors list
+        authors_bold = re.sub(r'\bYang, Y\.', '<b>Yang, Y.</b>', authors)
+        
+        return {
+            'authors': authors_bold,
+            'year': int(year),
+            'title': title,
+            'journal': f"Master's thesis, {institution}",
+            'volume': None,
+            'issue': None,
+            'pages': None,
+            'doi_url': None,
+            'type': 'thesis'
+        }
     
-    return {
-        'authors': authors_bold,
-        'year': int(year),  # Convert to int for sorting
-        'title': title,
-        'journal': journal,
-        'volume': volume,
-        'issue': issue,
-        'pages': pages,
-        'doi_url': doi_url
-    }
+    print(f"Warning: Could not parse publication: {publication_text}")
+    return None
 
 def generate_html_li(publication_data):
     """
@@ -53,6 +82,7 @@ def generate_html_li(publication_data):
     issue = publication_data['issue']
     pages = publication_data['pages']
     doi_url = publication_data['doi_url']
+    pub_type = publication_data.get('type', 'journal')
     
     # Always add link to paper title (use DOI URL if available, otherwise placeholder)
     if doi_url:
@@ -61,15 +91,24 @@ def generate_html_li(publication_data):
         # Use placeholder link if no DOI available
         title_with_link = f'<a href="#" target="_blank">{title}</a>'
     
-    # Format the citation
-    citation = f"{authors} ({year}). {title_with_link}. <em>{journal}</em>"
-    
-    if issue:
-        citation += f", {volume}({issue})"
+    # Format the citation based on type
+    if pub_type == 'thesis':
+        # For thesis: Authors (Year). Title. Master's thesis, Institution.
+        citation = f"{authors} ({year}). {title_with_link}. <em>{journal}</em>."
     else:
-        citation += f", {volume}"
-    
-    citation += f", {pages}."
+        # For journal articles: Authors (Year). Title. Journal, Volume(Issue), Pages.
+        citation = f"{authors} ({year}). {title_with_link}. <em>{journal}</em>"
+        
+        if volume:
+            if issue:
+                citation += f", {volume}({issue})"
+            else:
+                citation += f", {volume}"
+        
+        if pages:
+            citation += f", {pages}."
+        else:
+            citation += "."
     
     return f'<li style="margin: 10px">{citation}</li>'
 

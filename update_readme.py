@@ -172,46 +172,6 @@ This is the personal academic website of {info['name']}, a {info['title']} at th
         readme_content += f"- {award}\n"
     
     readme_content += f"""
-## Website Features
-
-- Responsive design using Bootstrap
-- Modern UI with custom styling
-- Interactive research portfolio with modal windows
-- Contact form functionality
-- Integration with academic profiles (Google Scholar, GitHub, LinkedIn)
-- Multi-language support (English and Chinese)
-
-## Technical Stack
-
-- HTML5
-- CSS3
-- JavaScript
-- Bootstrap Framework
-- jQuery
-- Font Awesome Icons
-- Google Fonts
-
-## Website Sections
-
-The website is organized into several main sections:
-- **About Me**: Professional background and education
-- **Research**: Interactive portfolio showcasing research projects
-- **Publications**: Academic publications and research output
-- **Awards**: Grants, scholarships, and recognition
-- **Teaching**: Teaching experience and course materials
-- **Contact**: Contact information and form
-
-## Development
-
-The website is hosted on GitHub Pages and can be accessed at [{info['website']}]({info['website']}).
-
-### Local Development
-
-To run the website locally:
-1. Clone the repository: `git clone https://github.com/gisyaliny/gisyaliny.github.io.git`
-2. Open `index.html` in a web browser
-3. Or serve locally using a simple HTTP server: `python -m http.server 8000`
-
 ## Contact
 
 - **Email**: [{info['email']}](mailto:{info['email']})
@@ -219,10 +179,6 @@ To run the website locally:
 - **Google Scholar**: [{info['name']}]({info['social_links'].get('Google Scholar', '#')})
 - **GitHub**: [gisyaliny]({info['social_links'].get('GitHub', '#')})
 - **LinkedIn**: [{info['name']}]({info['social_links'].get('LinkedIn', '#')})
-
-## License
-
-All rights reserved. Copyright © {current_year} {info['name']}.
 
 ---
 

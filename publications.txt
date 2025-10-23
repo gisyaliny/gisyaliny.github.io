@@ -3,3 +3,4 @@ Yang, Y., Wu, Y., & Yuan, M. (2024). What Local Environments Drive Opportunities
 Griffith, D. A., Conway, C., Gamarra, A., Hutchison, M., Kim, D., & Yang, Y. (2025). Political Districts Versus Customized Polygons: Implementing Geographic Tessellation Stratified Random Sampling. Transactions in GIS, 29(2), e70019.
 Wu, Y., Yang, Y., & Yuan, M. (2024). Location Analytics of Routine Occurrences (LARO) to Identify Locations with Regularly Occurring Events with a Case Study on Traffic Accidents. Information, 15(2), 107.
 Wu, Y., Yang, Y., & Yuan, M. (2023). Understanding the role of geographical environments in emergency dispatches with GPS trajectories. Abstracts of the ICA, 6, 276.
+Yang, Y. (2019). A Framework for Analyzing Real-Time House Rent Using Open Data (Master's thesis, State University of New York at Binghamton).

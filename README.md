@@ -56,46 +56,6 @@ Yalin Yang focuses on applying geospatial big data, machine learning, and cloud 
 - 2023: Pioneer Student Research Grants, University of Texas at Dallas
 - 2022: ICA Scholarship, International Cartographic Association (ICA)
 
-## Website Features
-
-- Responsive design using Bootstrap
-- Modern UI with custom styling
-- Interactive research portfolio with modal windows
-- Contact form functionality
-- Integration with academic profiles (Google Scholar, GitHub, LinkedIn)
-- Multi-language support (English and Chinese)
-
-## Technical Stack
-
-- HTML5
-- CSS3
-- JavaScript
-- Bootstrap Framework
-- jQuery
-- Font Awesome Icons
-- Google Fonts
-
-## Website Sections
-
-The website is organized into several main sections:
-- **About Me**: Professional background and education
-- **Research**: Interactive portfolio showcasing research projects
-- **Publications**: Academic publications and research output
-- **Awards**: Grants, scholarships, and recognition
-- **Teaching**: Teaching experience and course materials
-- **Contact**: Contact information and form
-
-## Development
-
-The website is hosted on GitHub Pages and can be accessed at [https://gisyaliny.github.io/](https://gisyaliny.github.io/).
-
-### Local Development
-
-To run the website locally:
-1. Clone the repository: `git clone https://github.com/gisyaliny/gisyaliny.github.io.git`
-2. Open `index.html` in a web browser
-3. Or serve locally using a simple HTTP server: `python -m http.server 8000`
-
 ## Contact
 
 - **Email**: [yy00021@mail.wvu.edu](mailto:yy00021@mail.wvu.edu)
@@ -104,10 +64,6 @@ To run the website locally:
 - **GitHub**: [gisyaliny](https://github.com/gisyaliny)
 - **LinkedIn**: [Yalin Yang](https://www.linkedin.com/in/yalin-yang-65959014a/)
 
-## License
-
-All rights reserved. Copyright © 2025 Yalin Yang.
-
 ---
 
-*This README is automatically generated from the website content. Last updated: 2025-10-22 19:28:16*
+*This README is automatically generated from the website content. Last updated: 2025-10-22 21:11:44*
