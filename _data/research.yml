@@ -1,0 +1,109 @@
+- id: researchModal1
+  title: GIScience
+  subtitle: Spatial Analysis, Geostatistics, WebGIS, GIS Programming, Python, R
+  thumbnail: img/research/webgis-thumbnail.jpg
+  expertise:
+    - Recent Research
+    - Spatial Data Analytics
+    - Web GIS Mapping
+    - GIS Programming (Python, R, JavaScript)
+  sections:
+    - title: Recent Research
+      items:
+        - text: "**Quantifying the impacts of social infrastructure on human networks** (Dissertation)"
+          images: 
+            - img/research/social-events01.png
+            - img/research/social-events02.png
+        - text: "**Deploy and fine tuning GEOAI Foundation Model on cloud platform** (I-GUIDE, <a href='https://gisyaliny.github.io/projects/Research/GEOAI-Model-Transformation/instruction/' target='_blank'>Intro</a>)"
+          images:
+            - img/research/IGUIDE-teams.png
+            - img/research/IGUIDE-GEOAI.png
+        - text: "**Deciphering the Impact of Built Environments on Sleep Quality** (UTD Seed Program)"
+          images:
+            - img/research/sleep.png
+        - text: "**Impact of Built Environments on Traffic Accidents** <a href='https://www.mdpi.com/2078-2489/15/2/107' target='_blank'>(Wu, Y., Yang, Y., & Yuan, M. (2024))</a>"
+          images:
+            - img/research/traffics.png
+        - text: "**Map Matching** - Snap raw GPS Points to Road Segments (<a href='files/research/MapMatching.pdf' target='_blank'>Intro</a>)"
+          images:
+            - img/research/MapMatching.png
+    - title: Spatial Data Analytics
+      items:
+        - text: "**Urban Analysis** - Measuring the vibrancy of Austin neighborhoods using taxi data with PageRank algorithm (<a href='img/research/YalinFinalPageRank.pdf' target='_blank'>Intro</a>)"
+          images:
+            - img/research/PageRank1.png
+            - img/research/PageRank2.png
+        - text: "**Semantic analysis** - Interpreting spatial heterogeneous of Housing rent in Dallas using open textual data (<a href='files/research/Interpreting spatial heterogeneous of Housing rent in Dallas using open textual data.pdf' target='_blank'>Intro</a>)"
+          images:
+            - img/research/Semantic02.png
+            - img/research/Semantic01.png
+        - text: "**Twitter Analytics** - Sentiment analysis of location-based Twitter data (<a href='files/research/twitter.html' target='_blank'>Demo</a>)"
+          images:
+            - img/research/twitter.png
+    - title: Web GIS Mapping
+      items:
+        - text: "Web GIS mapping using online software packages, such as Leaflet, Arcgis Online (<a href='files/research/Web-Mapping.html' target='_blank'>Demo</a>)"
+          link: "img/research/Web-Mapping.html"
+          images:
+            - img/research/Web-Mapping.png
+    - title: GIS Programming
+      items:
+        - text: "**Object Detection and Segmentation** - Using Python, GoogleLeNet"
+          images:
+            - img/research/Object-detect.gif
+        - text: "**Land cover classification** - Using Python, Tensorflow, Keras (<a href='files/research/LandClassification.html' target='_blank'>Demo</a>)"
+          images:
+            - img/research/Land-Classification.png
+
+- id: researchModal4
+  title: Software & Addins
+  subtitle: Serverless App development (AWS), Android Development, Addins for ArcGIS
+  thumbnail: img/research/Software-Thumbnails.png
+  expertise:
+    - Android Development
+    - Serverless App development (AWS)
+    - ArcGIS addins development using Python and R
+  sections:
+    - title: Android Development
+      items:
+        - text: "**Footprints** - Sentiment analysis of location-based Twitter data (<a href='files/research/GPS App instructions.pdf' target='_blank'>Intro</a>) <br> <i>Families, Neighborhoods, and Sleep among Hispanic/Latinx Parents: A Social-Ecological Approach. H. Kane (PI) and May Yuan (Co-PI). UTD Seed Program for Interdisciplinary Research (SPIRe) 2021. $100,000.</i>"
+          images:
+            - img/research/sleep.png
+            - img/research/footprint-app.png
+    - title: Serverless App development with AWS
+      items:
+        - text: "The structure of my serverless application is as follows: Develop REST API using AWS API Gateway to handle HTTP requests from the client side. The server-side is implemented using the AWS Lambda function. And use AWS DynamoDB as the database."
+          images:
+            - img/research/AWS-Serverless.png
+            - img/research/AWS-Serverless02.png
+    - title: ArcGIS addins development using Python and R
+      items:
+        - text: "**Global Environment Investigation** - ArcGIS tools for raster analysis (<a href='files/research/ArcgisAddins.pdf' target='_blank'>intro</a>) <br> Develop one toolbox which could satisfy the common requirement when we were dealing with raster dataset."
+          images:
+            - img/research/ArcGIS-Addins.png
+        - text: "**Dislocated Water System Extraction (C#)** - Develop plugins to generate river valley line automatically (<a href='https://gisyaliny.github.io/projects/Research/Add-in-plug-in-Development-For-Dislocated-Water-System-Extraction/intro/' target='_blank'>intro</a>) <br> Develop an Add-in plug-in that could automatically search for the bottom edge of the river according to the water body DEM image, and extract the river profile information at equal intervals according to the user setting, and reflect the real trend of the river. Based on this, seek for the broken river system."
+          images:
+            - img/research/ArcGIS-Addins02.png
+
+- id: researchModal2
+  title: Remote Sensing
+  subtitle: Satelite Image, Big Data, Google Earth Engine, ArcGIS
+  thumbnail: img/research/RS-thumbnail.png
+  sections:
+    - title: Remote Sensing
+      items:
+        - title: Assess Fire Risk of Acadia National Park
+          link: "files/research/assess Fire risk  of Acadia national park.pdf"
+          text: "According to the woodland adaptive evaluation system provided by ESRI China, using the maximum likelihood method to classify the Landsat image of Acadia National Park, and assess the fire risk for each part, avoid fires like 1947."
+          images: 
+            - img/research/fire01.png
+            - img/research/fire02.png
+            - img/research/fire03.png
+        - title: Assess the Quality of Life of Lake Mille Lacs around Area
+          link: "files/research/assess Fire risk of Acadia national park.pdf"
+          text: "Using the Principal component and Factor analysis method, combining multiple kinds of data, assess the quality of life for Lake Mille Lacs around Area from four aspects. Prove the economic and ecological benefits brought by the lake to the surrounding area."
+          images:
+            - img/research/QOL01.png
+            - img/research/QOL02.png
+        - title: Check My Project about Google Earth Engine Here
+          link: "https://sites.google.com/binghamton.edu/yalinyanghome/research/web-mapping-google-earth-engine"

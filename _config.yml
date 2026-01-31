@@ -1,0 +1,35 @@
+title: Yalin Yang - Research Associate & GIS Programmer
+email: yy00021@mail.wvu.edu
+description: >- # this means to ignore newlines until "baseurl:"
+  Dr. Yalin Yang is a Research Associate and GIS Programmer at West Virginia GIS Technical Center, West Virginia University. 
+  Expert in Geographic Information Science, Urban Environment Modeling, and Big Geospatial Data Analytics.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://gisyaliny.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: gisyaliny
+github_username:  gisyaliny
+google_scholar_id: wdkZhlwAAAAJ
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+
+# Custom Variables
+authorv:
+  name: Yalin Yang
+  chinese_name: 杨亚霖
+  role: Research Associate & GIS Programmer
+  organization: West Virginia GIS Technical Center
+  university: West Virginia University
+  cv_link: ./cv.html
+  image: img/team/me.png
+  
+social:
+  scholar: https://scholar.google.com/citations?user=wdkZhlwAAAAJ&hl=en
+  github: https://github.com/gisyaliny
+  linkedin: https://www.linkedin.com/in/yalin-yang-65959014a/
+  email: mailto:yy00021@mail.wvu.edu
+
+addresses:
+  - line: Morgantown, West Virginia, US

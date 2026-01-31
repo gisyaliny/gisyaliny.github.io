@@ -1,9 +1,13 @@
+---
+layout: null
+---
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Yalin Yang</title>
+    <title>CV - {{ site.authorv.name }}</title>
     <link rel="icon" type="image/x-icon" href="/img/YalinYang.ico">
     <style>
         body {
@@ -13,190 +17,94 @@
             margin: 0 auto;
             padding: 20px;
         }
+
         h1 {
             color: #333;
             border-bottom: 2px solid #333;
             padding-bottom: 10px;
         }
+
         h2 {
             color: #666;
             margin-top: 30px;
             border-bottom: 1px solid #ccc;
             padding-bottom: 5px;
         }
+
         .contact-info {
             margin-bottom: 20px;
         }
-        .publication-item, .education-item, .appointment-item, .award-item {
+
+        .publication-item,
+        .education-item,
+        .appointment-item,
+        .award-item {
             margin-bottom: 10px;
             padding-left: 10px;
         }
+
         .year {
             font-weight: bold;
             color: #333;
         }
+
         .journal {
             font-style: italic;
         }
+
         .organization {
             font-weight: bold;
         }
     </style>
 </head>
+
 <body>
-    <h1>Yalin Yang</h1>
-    
+    <h1>{{ site.authorv.name }}</h1>
+
     <div class="contact-info">
-        <p><strong>Email:</strong> yy00021@mail.wvu.edu</p>
+        <p><strong>Email:</strong> {{ site.social.email | remove: 'mailto:' }}</p>
         <p><strong>Phone:</strong> +1-607-374-9844</p>
         <p><strong>Office:</strong> 330 Brooks Hall</p>
-        <p><strong>Position:</strong> Research Associate, GIS Programmer</p>
+        <p><strong>Position:</strong> {{ site.authorv.role }}</p>
     </div>
 
     <h2>Education</h2>
 
+    {% for edu in site.data.education %}
     <div class="education-item">
-        <span class="year">2019–2024</span> - Ph.D. in Geospatial Information Sciences<br>
-        University of Texas at Dallas, Texas, USA
+        <span class="year">{{ edu.year }}</span> - {{ edu.degree }}<br>
+        {{ edu.university }}, {{ edu.location }}
     </div>
-
-    <div class="education-item">
-        <span class="year">2017–2019</span> - M.A. in Geography<br>
-        Binghamton University (SUNY), New York, USA
-    </div>
-
-    <div class="education-item">
-        <span class="year">2013–2017</span> - B.S. in Geographic Information Science<br>
-        Yunnan University, Yunnan, China
-    </div>
+    {% endfor %}
 
     <h2>Appointments</h2>
 
+    {% for appt in site.data.experience %}
     <div class="appointment-item">
-        <span class="year">2024</span> - Senior GIS Analyst<br>
-        City of Dallas, Dallas, TX
+        <span class="year">{{ appt.year }}</span> - {{ appt.role }}<br>
+        {{ appt.organization }}, {{ appt.location }}
     </div>
-
-    <div class="appointment-item">
-        <span class="year">2021–2024</span> - GIS Administrator<br>
-        GAIA Lab, UT Dallas, University of Texas at Dallas
-    </div>
-
-    <div class="appointment-item">
-        <span class="year">2019–2024</span> - Teaching Assistant<br>
-        Department of GIScience, UT Dallas, University of Texas at Dallas
-    </div>
-
-    <div class="appointment-item">
-        <span class="year">2018–2019</span> - Teaching Assistant<br>
-        Department of Geography, Binghamton University (SUNY), Binghamton University
-    </div>
+    {% endfor %}
 
     <h2>Publications</h2>
 
+    {% for pub in site.data.publications %}
     <div class="publication-item">
-        <span class="year">2025</span> - Griffith, D. A., Conway, C., Gamarra, A., Hutchison, M., Kim, D., & <b>Yang, Y.</b><br>
-        Political Districts Versus Customized Polygons: Implementing Geographic Tessellation Stratified Random Sampling<br>
-        <span class="journal">Transactions in GIS</span>
+        <span class="year">{{ pub.year }}</span> - {{ pub.authors | markdownify | remove: '<p>' | remove: '</p>' }}<br>
+        {{ pub.title }}<br>
+        <span class="journal">{{ pub.journal }}</span>
     </div>
-
-    <div class="publication-item">
-        <span class="year">2024</span> - Maxwell, A. E., Farhadpour, S., Das, S., & <b>Yang, Y.</b><br>
-        geodl: An R package for geospatial deep learning semantic segmentation using torch and terra<br>
-        <span class="journal">PLoS One</span>
-    </div>
-
-    <div class="publication-item">
-        <span class="year">2024</span> - <b>Yang, Y.</b>, Wu, Y., & Yuan, M.<br>
-        What Local Environments Drive Opportunities for Social Events? A New Approach Based on Bayesian Modeling in Dallas, Texas, USA<br>
-        <span class="journal">ISPRS International Journal of Geo-Information</span>
-    </div>
-
-    <div class="publication-item">
-        <span class="year">2024</span> - Wu, Y., <b>Yang, Y.</b>, & Yuan, M.<br>
-        Location Analytics of Routine Occurrences (LARO) to Identify Locations with Regularly Occurring Events with a Case Study on Traffic Accidents<br>
-        <span class="journal">Information</span>
-    </div>
-
-    <div class="publication-item">
-        <span class="year">2023</span> - Wu, Y., <b>Yang, Y.</b>, & Yuan, M.<br>
-        Understanding the role of geographical environments in emergency dispatches with GPS trajectories<br>
-        <span class="journal">Abstracts of the ICA</span>
-    </div>
-
-    <div class="publication-item">
-        <span class="year">2019</span> - <b>Yang, Y.</b><br>
-        A Framework for Analyzing Real-Time House Rent Using Open Data<br>
-        <span class="journal">Master's thesis, State University of New York at Binghamton</span>
-    </div>
+    {% endfor %}
 
     <h2>Grants & Awards</h2>
 
+    {% for award in site.data.awards %}
     <div class="award-item">
-        <span class="year">2024</span> - Geospatial Cyberinfrastructure Workshop Scholarship<br>
-        <span class="organization">National Science Foundation</span>
+        <span class="year">{{ award.year }}</span> - {{ award.title }}<br>
+        <span class="organization">{{ award.organization }}</span>
     </div>
-
-    <div class="award-item">
-        <span class="year">2024</span> - Betty and Gifford Travel Award<br>
-        <span class="organization">University of Texas at Dallas</span>
-    </div>
-
-    <div class="award-item">
-        <span class="year">2023</span> - AAG Student Travel Grants<br>
-        <span class="organization">American Association of Geographers (AAG)</span>
-    </div>
-
-    <div class="award-item">
-        <span class="year">2023</span> - Betty and Gifford Travel Award<br>
-        <span class="organization">University of Texas at Dallas</span>
-    </div>
-
-    <div class="award-item">
-        <span class="year">2023</span> - I-GUIDE
-                                    Summer School Travel Award<br>
-        <span class="organization">National Science Foundation</span>
-    </div>
-
-    <div class="award-item">
-        <span class="year">2023</span> - Pioneer
-                                    Student Research Grants.<br>
-        <span class="organization">University of Texas at Dallas</span>
-    </div>
-
-    <div class="award-item">
-        <span class="year">2022</span> - ICA
-                                    Scholarship.<br>
-        <span class="organization">International Cartographic Assoication (ICA)</span>
-    </div>
-
-    <div class="award-item">
-        <span class="year">2022</span> - Pioneer Student Research Grants.<br>
-        <span class="organization">University of Texas at Dallas</span>
-    </div>
-
-    <div class="award-item">
-        <span class="year">2022</span> - Esri EIP student of the Year Award.<br>
-        <span class="organization">ESRI</span>
-    </div>
-
-    <div class="award-item">
-        <span class="year">2021</span> - Ph.D.
-                                    Research Small Award.<br>
-        <span class="organization">University of Texas at Dallas</span>
-    </div>
-
-    <div class="award-item">
-        <span class="year">2019</span> - Pioneer
-                                    Student Research Grants<br>
-        <span class="organization">University of Texas at Dallas</span>
-    </div>
-
-    <div class="award-item">
-        <span class="year">2019</span> - AAG-UCGIS Summer School Travel Award<br>
-        <span class="organization">University Consortium for
-                                Geographic Information Science (UCGIS)</span>
-    </div>
+    {% endfor %}
 
 </body>
+
 </html>

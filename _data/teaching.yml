@@ -1,0 +1,53 @@
+- title: Geo-Spatial Data Analysis Fundamentals
+  course_id: GISC-6301
+  university: University of Texas at Dallas
+  image: img/teaching/GISC6301-GIS-Data-Analysis-Fundamentals.png
+  link: img/teaching/GISC6301-GIS-Data-Analysis-Fundamentals.png
+
+- title: "Machine Learning for Socio-Economic and Georeferenced Data"
+  course_id: GISC-6323
+  university: University of Texas at Dallas
+  image: img/teaching/GISC6323-Machine-Learning.png
+  link: https://gisyaliny.github.io/gisc-6323/
+
+- title: Advanced GISC Data Analysis
+  course_id: GISC-7310
+  university: University of Texas at Dallas
+  image: img/teaching/GISC-7310-Advanced-GIS-Data-Analysis.png
+  link: img/teaching/GISC-7310-Advanced-GIS-Data-Analysis.png
+
+- title: Applied Regression
+  course_id: GISC-6316
+  university: University of Texas at Dallas
+  image: img/teaching/EPPS6316-Applied-Regression.png
+  link: img/teaching/EPPS6316-Applied-Regression.png
+
+- title: Data Management for Social Science Research
+  course_id: GISC-6324
+  university: University of Texas at Dallas
+  image: img/teaching/EPPS6324-Data-Management.png
+  link: img/teaching/EPPS6324-Data-Management.png
+
+- title: GIS Pattern Analysis
+  course_id: GISC-7360
+  university: University of Texas at Dallas
+  image: img/teaching/GISC7360-Pattern-Analysis.png
+  link: img/teaching/GISC7360-Pattern-Analysis.png
+
+- title: Advanced Data Programming
+  course_id: GISC-7v81
+  university: University of Texas at Dallas
+  image: img/teaching/EPPS7V81-Advanced-Data-Programming.png
+  link: img/teaching/EPPS7V81-Advanced-Data-Programming.png
+
+- title: Spatial Data Science
+  course_id: GISC-6321
+  university: University of Texas at Dallas
+  image: img/teaching/GISC-6321-Spatial-Data-Science.png
+  link: img/teaching/GISC-6321-Spatial-Data-Science.png
+
+- title: The Global Environment
+  course_id: ENVR-2302
+  university: University of Texas at Dallas
+  image: img/teaching/GEOG-2302-The-Global-Environment.png
+  link: img/teaching/GEOG-2302-The-Global-Environment.png

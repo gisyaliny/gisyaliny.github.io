@@ -1,0 +1,45 @@
+- title: 'Political Districts Versus Customized Polygons: Implementing Geographic Tessellation Stratified Random Sampling'
+  authors: Daniel A Griffith and Crystal Conway and Americo Gamarra and Mae Hutchison and Dongeun Kim and **Yalin Yang**
+  year: 2025
+  journal: Transactions in GIS, 29(2), e70019
+  link: https://onlinelibrary.wiley.com/doi/abs/10.1111/tgis.70019
+- title: Simulation‐Tested Spatial Association Mining of Co‐Location Patterns From Multiple Point‐Feature Classes
+  authors: '**Yalin Yang** and Yanan Wu and May Yuan'
+  year: 2025
+  journal: Transactions in GIS, 29(7), e70145
+  link: https://onlinelibrary.wiley.com/doi/abs/10.1111/tgis.70145
+- title: What Local Environments Drive Opportunities for Social Events? A New Approach Based on Bayesian Modeling in Dallas, Texas, USA
+  authors: May Yuan **Yalin Yang** and Yanan Wu
+  year: 2024
+  journal: ISPRS International Journal of Geo-Information, 13(3), 81
+  link: https://www.mdpi.com/2220-9964/13/3/81
+- title: 'geodl: An R package for geospatial deep learning semantic segmentation using torch and terra'
+  authors: Aaron E Maxwell and Sarah Farhadpour and Srinjoy Das and **Yalin Yang**
+  year: 2024
+  journal: PLoS One, 19(12), e0315127
+  link: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0315127
+- title: Location Analytics of Routine Occurrences (LARO) to Identify Locations with Regularly Occurring Events with a Case Study on Traffic Accidents
+  authors: Yanan Wu and **Yalin Yang** and May Yuan
+  year: 2024
+  journal: Information, 15(2), 107
+  link: https://www.mdpi.com/2078-2489/15/2/107
+- title: Understanding the role of geographical environments in emergency dispatches with GPS trajectories
+  authors: Yanan Wu and **Yalin Yang** and May Yuan
+  year: 2023
+  journal: Abstracts of the ICA, 6, 276
+  link: https://ica-abs.copernicus.org/articles/6/276/2023/ica-abs-6-276-2023.pdf
+- title: Analyze emergency-vehicle dispatches in Dallas, Texas, USA
+  authors: Yanan Wu and **Yalin Yang** and May Yuan
+  year: 2022
+  journal: Preprint
+  link: https://cartogis.org/docs/autocarto/2022/docs/abstracts/Session8_Yu_8726.pdf
+- title: Quantifying the impacts of social infrastructure on human networks
+  authors: '**Yalin Yang** and Yanan Wu and May Yuan'
+  year: 2022
+  journal: Preprint
+  link: https://cartogis.org/docs/autocarto/2022/docs/abstracts/Session2_Yang_2399.pdf
+- title: A Framework for Analyzing Real-Time House Rent Using Open Data
+  authors: '**Yalin Yang**'
+  year: 2019
+  journal: Preprint
+  link: https://search.proquest.com/openview/7eee47a66fb6a9af8e9caeb6d1ed71fb/1?pq-origsite=gscholar&cbl=18750&diss=y
