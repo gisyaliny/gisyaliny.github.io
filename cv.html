@@ -1,110 +1,348 @@
----
-layout: null
----
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - {{ site.authorv.name }}</title>
-    <link rel="icon" type="image/x-icon" href="/img/YalinYang.ico">
+    <title>Yalin Yang - Curriculum Vitae</title>
+    
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
+        
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
+            font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+            color: #333;
+            line-height: 1.5;
+            max-width: 850px;
+            margin: 40px auto;
+            padding: 0 20px;
+            background-color: #f9f9f9;
         }
-
+        
+        .cv-container {
+            background-color: white;
+            padding: 50px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.05);
+            border-top: 5px solid #2c3e50;
+        }
+        
+        a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        header {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        
         h1 {
-            color: #333;
-            border-bottom: 2px solid #333;
-            padding-bottom: 10px;
+            font-family: 'Merriweather', serif;
+            font-size: 32px;
+            color: #2c3e50;
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
-
-        h2 {
-            color: #666;
-            margin-top: 30px;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 5px;
+        
+        .title {
+            font-size: 18px;
+            color: #7f8c8d;
+            font-weight: 300;
+            margin: 0;
         }
-
+        
         .contact-info {
+            text-align: right;
+            font-size: 14px;
+            color: #555;
+        }
+        
+        .contact-info p {
+            margin: 3px 0;
+        }
+        
+        section {
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 20px;
+            color: #2c3e50;
+            border-bottom: 3px solid #f1f1f1;
+            padding-bottom: 8px;
+            margin-top: 0;
             margin-bottom: 20px;
+            text-transform: uppercase;
+            display: inline-block;
+            border-bottom-color: #3498db;
         }
-
-        .publication-item,
-        .education-item,
-        .appointment-item,
-        .award-item {
-            margin-bottom: 10px;
-            padding-left: 10px;
+        
+        .item {
+            margin-bottom: 15px;
+            display: flex;
         }
-
-        .year {
+        
+        .item-year {
+            flex: 0 0 120px;
             font-weight: bold;
-            color: #333;
+            color: #7f8c8d;
+            font-size: 14px;
+            padding-top: 2px;
         }
-
-        .journal {
-            font-style: italic;
+        
+        .item-content {
+            flex: 1;
         }
-
-        .organization {
-            font-weight: bold;
+        
+        .publication-item {
+            margin-bottom: 12px;
+            padding-left: 15px;
+            border-left: 3px solid #eee;
+        }
+        
+        .publication-item:hover {
+            border-left-color: #3498db;
+        }
+        
+        .appointment-item, .education-item {
+            margin-bottom: 15px;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+                margin: 0;
+            }
+            .cv-container {
+                box-shadow: none;
+                padding: 0;
+                border: none;
+            }
+            a {
+                color: #000;
+                text-decoration: none;
+            }
         }
     </style>
+    
 </head>
-
 <body>
-    <h1>{{ site.authorv.name }}</h1>
 
-    <div class="contact-info">
-        <p><strong>Email:</strong> {{ site.social.email | remove: 'mailto:' }}</p>
-        <p><strong>Phone:</strong> +1-607-374-9844</p>
-        <p><strong>Office:</strong> 330 Brooks Hall</p>
-        <p><strong>Position:</strong> {{ site.authorv.role }}</p>
-    </div>
+<div class="cv-container">
+    <header>
+        <div>
+            <h1>Yalin Yang</h1>
+            <h3 class="title">Research Associate & GIS Programmer</h3>
+            <p>West Virginia GIS Technical Center<br>West Virginia University</p>
+        </div>
+        <div class="contact-info">
+            <p>yy00021@mail.wvu.edu</p>
+            <p>+1-607-374-9844</p>
+            <p>330 Brooks Hall</p>
+            <p>Morgantown, WV 26506</p>
+            <p><a href="https://gisyaliny.github.io/">https://gisyaliny.github.io/</a></p>
+        </div>
+    </header>
 
-    <h2>Education</h2>
+    <section>
+        <h2>Education</h2>
 
-    {% for edu in site.data.education %}
-    <div class="education-item">
-        <span class="year">{{ edu.year }}</span> - {{ edu.degree }}<br>
-        {{ edu.university }}, {{ edu.location }}
-    </div>
-    {% endfor %}
+        <div class="item">
+            <div class="item-year"></div>
+            <div class="item-content">2019–2024   Ph.D. in Geospatial Information Sciences.</div>
+        </div>
+        
+        <div class="item">
+            <div class="item-year"></div>
+            <div class="item-content">2017–2019   M.A. in Geography.</div>
+        </div>
+        
+        <div class="item">
+            <div class="item-year"></div>
+            <div class="item-content">2013–2017   B.S. in Geographic Information Science.</div>
+        </div>
+        
+    </section>
 
-    <h2>Appointments</h2>
+    <section>
+        <h2>Academic Appointments</h2>
 
-    {% for appt in site.data.experience %}
-    <div class="appointment-item">
-        <span class="year">{{ appt.year }}</span> - {{ appt.role }}<br>
-        {{ appt.organization }}, {{ appt.location }}
-    </div>
-    {% endfor %}
+        <div class="item">
+            <div class="item-year"></div>
+            <div class="item-content">2024–Present   Research Associate, GIS Programmer,</div>
+        </div>
+        
+        <div class="item">
+            <div class="item-year"></div>
+            <div class="item-content">2024–2024   Senior GIS Analyst, City of Dallas</div>
+        </div>
+        
+        <div class="item">
+            <div class="item-year"></div>
+            <div class="item-content">2021–2024   GIS Administrator, GAIA Lab, UT Dallas</div>
+        </div>
+        
+        <div class="item">
+            <div class="item-year"></div>
+            <div class="item-content">2019–2024   Teaching Assistant, Department of GIScience, UT Dallas</div>
+        </div>
+        
+        <div class="item">
+            <div class="item-year"></div>
+            <div class="item-content">2018–2019   Teaching Assistant, Department of Geography, Binghamton University</div>
+        </div>
+        
+    </section>
 
-    <h2>Publications</h2>
+    <section>
+        <h2>Publications</h2>
 
-    {% for pub in site.data.publications %}
-    <div class="publication-item">
-        <span class="year">{{ pub.year }}</span> - {{ pub.authors | markdownify | remove: '<p>' | remove: '</p>' }}<br>
-        {{ pub.title }}<br>
-        <span class="journal">{{ pub.journal }}</span>
-    </div>
-    {% endfor %}
+        <div class="item">
+            <div class="item-year">2025</div>
+            <div class="item-content publication-item">
+                Griffith, D. A., Conway, C., Gamarra, A., Hutchison, M., Kim, D., & <b>Yang, Y.</b> (2025). <a href="https://doi.org/10.1111/tgis.70019" target="_blank">Political Districts Versus Customized Polygons: Implementing Geographic Tessellation Stratified Random Sampling</a>. <em>Transactions in GIS</em>, 29(2), e70019.
+            </div>
+        </div>
+        
+        <div class="item">
+            <div class="item-year">2025</div>
+            <div class="item-content publication-item">
+                <b>Yang, Y.</b>, Wu, Y., Yuan, M. (2025). <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/tgis.70145" target="_blank">Simulation‐Tested Spatial Association Mining of Co‐Location Patterns From Multiple Point‐Feature Classes</a>. <em>Transactions in GIS</em>, 29(7), e70145.
+            </div>
+        </div>
+        
+        <div class="item">
+            <div class="item-year">2024</div>
+            <div class="item-content publication-item">
+                Maxwell, A. E., Farhadpour, S., Das, S., & <b>Yang, Y.</b> (2024). <a href="https://doi.org/10.1371/journal.pone.0315127" target="_blank">geodl: An R package for geospatial deep learning semantic segmentation using torch and terra</a>. <em>PLoS One</em>, 19(12), e0315127.
+            </div>
+        </div>
+        
+        <div class="item">
+            <div class="item-year">2024</div>
+            <div class="item-content publication-item">
+                <b>Yang, Y.</b>, Wu, Y., & Yuan, M. (2024). <a href="https://doi.org/10.3390/ijgi13030081" target="_blank">What Local Environments Drive Opportunities for Social Events? A New Approach Based on Bayesian Modeling in Dallas, Texas, USA</a>. <em>ISPRS International Journal of Geo-Information</em>, 13(3), 81.
+            </div>
+        </div>
+        
+        <div class="item">
+            <div class="item-year">2024</div>
+            <div class="item-content publication-item">
+                Wu, Y., <b>Yang, Y.</b>, & Yuan, M. (2024). <a href="https://doi.org/10.3390/info15020107" target="_blank">Location Analytics of Routine Occurrences (LARO) to Identify Locations with Regularly Occurring Events with a Case Study on Traffic Accidents</a>. <em>Information</em>, 15(2), 107.
+            </div>
+        </div>
+        
+        <div class="item">
+            <div class="item-year">2023</div>
+            <div class="item-content publication-item">
+                Wu, Y., <b>Yang, Y.</b>, & Yuan, M. (2023). <a href="https://ica-abs.copernicus.org/articles/6/276/2023/ica-abs-6-276-2023.pdf" target="_blank">Understanding the role of geographical environments in emergency dispatches with GPS trajectories</a>. <em>Abstracts of the ICA</em>, 6, 276.
+            </div>
+        </div>
+        
+        <div class="item">
+            <div class="item-year">2022</div>
+            <div class="item-content publication-item">
+                Wu, Y., <b>Yang, Y.</b>, Yuan, M. (2022). <a href="https://cartogis.org/docs/autocarto/2022/docs/abstracts/Session8_Yu_8726.pdf" target="_blank">Analyze emergency-vehicle dispatches in Dallas, Texas, USA</a>. <em>Unknown Journal</em>.
+            </div>
+        </div>
+        
+        <div class="item">
+            <div class="item-year">2022</div>
+            <div class="item-content publication-item">
+                <b>Yang, Y.</b>, Wu, Y., Yuan, M. (2022). <a href="https://cartogis.org/docs/autocarto/2022/docs/abstracts/Session2_Yang_2399.pdf" target="_blank">Quantifying the impacts of social infrastructure on human networks</a>. <em>Unknown Journal</em>.
+            </div>
+        </div>
+        
+        <div class="item">
+            <div class="item-year">2019</div>
+            <div class="item-content publication-item">
+                <b>Yang, Y.</b> (2019). <a href="https://www.proquest.com/docview/2296778720/fulltextPDF/ED086ADE2E484C34PQ/1?accountid=2837&amp;sourcetype=Dissertations%20&amp;%20Theses" target="_blank">A Framework for Analyzing Real-Time House Rent Using Open Data</a>. <em>Master's thesis, State University of New York at Binghamton</em>.
+            </div>
+        </div>
+        
+    </section>
+    
+    <section>
+        <h2>Grants & Awards</h2>
 
-    <h2>Grants & Awards</h2>
+        <div class="item">
+            <div class="item-year">2024</div>
+            <div class="item-content">Geospatial Cyberinfrastructure Workshop Scholarship National Science Foundation</div>
+        </div>
+        
+        <div class="item">
+            <div class="item-year">2024</div>
+            <div class="item-content">Betty and Gifford Travel Award University of Texas at Dallas</div>
+        </div>
+        
+        <div class="item">
+            <div class="item-year">2023</div>
+            <div class="item-content">AAG Student Travel Grants American Association of Geographers (AAG)</div>
+        </div>
+        
+        <div class="item">
+            <div class="item-year">2023</div>
+            <div class="item-content">Betty and Gifford Travel Award University of Texas at Dallas</div>
+        </div>
+        
+        <div class="item">
+            <div class="item-year">2023</div>
+            <div class="item-content">I-GUIDE Summer School Travel Award National Science Foundation</div>
+        </div>
+        
+        <div class="item">
+            <div class="item-year">2023</div>
+            <div class="item-content">Pioneer Student Research Grants. University of Texas at Dallas</div>
+        </div>
+        
+        <div class="item">
+            <div class="item-year">2022</div>
+            <div class="item-content">ICA Scholarship. International Cartographic Assoication (ICA)</div>
+        </div>
+        
+        <div class="item">
+            <div class="item-year">2022</div>
+            <div class="item-content">Pioneer Student Research Grants. University of Texas at Dallas</div>
+        </div>
+        
+        <div class="item">
+            <div class="item-year">2022</div>
+            <div class="item-content">Esri EIP student of the Year Award. ESRI</div>
+        </div>
+        
+        <div class="item">
+            <div class="item-year">2021</div>
+            <div class="item-content">Ph.D. Research Small Award. University of Texas at Dallas</div>
+        </div>
+        
+        <div class="item">
+            <div class="item-year">2019</div>
+            <div class="item-content">Pioneer Student Research Grants , University of Texas at Dallas</div>
+        </div>
+        
+        <div class="item">
+            <div class="item-year">2019</div>
+            <div class="item-content">AAG-UCGIS Summer School Travel Award , University Consortium for Geographic Information Science (UCGIS)</div>
+        </div>
+        
+    </section>
+    
+    <footer>
+        <p style="text-align: center; color: #999; font-size: 12px; margin-top: 50px;">
+            Last updated: January 2026
+        </p>
+    </footer>
 
-    {% for award in site.data.awards %}
-    <div class="award-item">
-        <span class="year">{{ award.year }}</span> - {{ award.title }}<br>
-        <span class="organization">{{ award.organization }}</span>
-    </div>
-    {% endfor %}
+</div>
 
 </body>
-
 </html>

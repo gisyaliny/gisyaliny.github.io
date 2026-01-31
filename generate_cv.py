@@ -30,7 +30,7 @@ def extract_info_from_html(html_file):
         'education': [],
         'appointments': [],
         'publications': [],
-        'awards': [],
+        'awards': []
     }
     
     # --- Extract basic info if available (overwriting defaults) ---

@@ -42,19 +42,30 @@ Yalin Yang focuses on applying geospatial big data, machine learning, and cloud 
 
 ## Recent Publications
 
-- Griffith, D. A., Conway, C., Gamarra, A., Hutchison, M., Kim, D., & Yang, Y. (2025). Political Districts Versus Customized Polygons: Implementing Geographic Tessellation Stratified Random Sampling. Transactions in GIS, 29(2), e70019.
-- Maxwell, A. E., Farhadpour, S., Das, S., & Yang, Y. (2024). geodl: An R package for geospatial deep learning semantic segmentation using torch and terra. PLoS One, 19(12), e0315127.
-- Yang, Y., Wu, Y., & Yuan, M. (2024). What Local Environments Drive Opportunities for Social Events? A New Approach Based on Bayesian Modeling in Dallas, Texas, USA. ISPRS International Journal of Geo-Information, 13(3), 81.
-- Wu, Y., Yang, Y., & Yuan, M. (2024). Location Analytics of Routine Occurrences (LARO) to Identify Locations with Regularly Occurring Events with a Case Study on Traffic Accidents. Information, 15(2), 107.
+- Griffith, D. A., Conway, C., Gamarra, A., Hutchison, M., Kim, D., & Yang, Y. (2025). Political Districts Versus Customized Polygons: Implementing Geographic Tessellation Stratified Random Sampling . Transactions in GIS , 29(2), e70019.
+- Yang, Y. , Wu, Y., Yuan, M. (2025). Simulation‐Tested Spatial Association Mining of Co‐Location Patterns From Multiple Point‐Feature Classes . Transactions in GIS , 29(7), e70145.
+- Maxwell, A. E., Farhadpour, S., Das, S., & Yang, Y. (2024). geodl: An R package for geospatial deep learning semantic segmentation using torch and terra . PLoS One , 19(12), e0315127.
+- Yang, Y. , Wu, Y., & Yuan, M. (2024). What Local Environments Drive Opportunities for Social Events? A New Approach Based on Bayesian Modeling in Dallas, Texas, USA . ISPRS International Journal of Geo-Information , 13(3), 81.
+- Wu, Y., Yang, Y. , & Yuan, M. (2024). Location Analytics of Routine Occurrences (LARO) to Identify Locations with Regularly Occurring Events with a Case Study on Traffic Accidents . Information , 15(2), 107.
+- Wu, Y., Yang, Y. , & Yuan, M. (2023). Understanding the role of geographical environments in emergency dispatches with GPS trajectories . Abstracts of the ICA , 6, 276.
+- Wu, Y., Yang, Y. , Yuan, M. (2022). Analyze emergency-vehicle dispatches in Dallas, Texas, USA . Unknown Journal .
+- Yang, Y. , Wu, Y., Yuan, M. (2022). Quantifying the impacts of social infrastructure on human networks . Unknown Journal .
+- Yang, Y. (2019). A Framework for Analyzing Real-Time House Rent Using Open Data . Master's thesis, State University of New York at Binghamton .
 
 ## Awards & Grants
 
-- 2024: Geospatial Cyberinfrastructure Workshop Scholarship, National Science Foundation
-- 2024: Betty and Gifford Travel Award, University of Texas at Dallas
-- 2023: AAG Student Travel Grants, American Association of Geographers (AAG)
-- 2023: I-GUIDE Summer School Travel Award, National Science Foundation
-- 2023: Pioneer Student Research Grants, University of Texas at Dallas
-- 2022: ICA Scholarship, International Cartographic Association (ICA)
+- 2024 Geospatial Cyberinfrastructure Workshop Scholarship National Science Foundation
+- 2024 Betty and Gifford Travel Award University of Texas at Dallas
+- 2023 AAG Student Travel Grants American Association of Geographers (AAG)
+- 2023 Betty and Gifford Travel Award University of Texas at Dallas
+- 2023 I-GUIDE Summer School Travel Award National Science Foundation
+- 2023 Pioneer Student Research Grants. University of Texas at Dallas
+- 2022 ICA Scholarship. International Cartographic Assoication (ICA)
+- 2022 Pioneer Student Research Grants. University of Texas at Dallas
+- 2022 Esri EIP student of the Year Award. ESRI
+- 2021 Ph.D. Research Small Award. University of Texas at Dallas
+- 2019 Pioneer Student Research Grants , University of Texas at Dallas
+- 2019 AAG-UCGIS Summer School Travel Award , University Consortium for Geographic Information Science (UCGIS)
 
 ## Contact
 
@@ -66,4 +77,4 @@ Yalin Yang focuses on applying geospatial big data, machine learning, and cloud 
 
 ---
 
-*This README is automatically generated from the website content. Last updated: 2025-10-22 21:11:44*
+*This README is automatically generated from the website content. Last updated: 2026-01-30 20:31:20*
