@@ -15,13 +15,13 @@ def main():
     print("=" * 50)
     
     try:
-        # Check if update_readme.py exists
-        if not os.path.exists('update_readme.py'):
-            print("❌ Error: update_readme.py not found!")
+        runner_path = os.path.join("scripts", "update_readme.py")
+        if not os.path.exists(runner_path):
+            print(f"❌ Error: {runner_path} not found!")
             return False
         
         # Run the update script
-        result = subprocess.run([sys.executable, 'update_readme.py'], 
+        result = subprocess.run([sys.executable, runner_path],
                               capture_output=True, text=True)
         
         if result.returncode == 0:
