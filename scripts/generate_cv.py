@@ -7,7 +7,8 @@ This was moved from the repository root into `scripts/`.
 
 from __future__ import annotations
 
-import os
+from html import escape
+import yaml
 import re
 import sys
 from datetime import datetime
@@ -30,7 +31,7 @@ def extract_info_from_html(html_file: str) -> dict:
 
     info = {
         "name": "Yalin Yang",
-        "title": "Research Associate & GIS Programmer",
+        "title": "Research Scientist & GIS Programmer",
         "contact": {
             "email": "yy00021@mail.wvu.edu",
             "phone": "+1-607-374-9844",
@@ -42,56 +43,29 @@ def extract_info_from_html(html_file: str) -> dict:
         "appointments": [],
         "publications": [],
         "awards": [],
+        "projects": [],
     }
 
-    # --- Extract Education ---
-    edu_header = soup.find(string=re.compile("Education:"))
-    if edu_header:
-        parent_p = edu_header.parent.parent  # strong -> p
-        text = parent_p.get_text("\n")
-        lines = text.split("\n")
-        for line in lines:
-            line = line.strip()
-            if re.search(r"\d{4}.*\d{4}", line):
-                info["education"].append(line.replace("•", "").replace("&bull;", "").strip())
+    for row in soup.select(".education-strip .record-list > li"):
+        degree = row.select_one("strong")
+        info["education"].append(f"{row.time.get_text(strip=True)}: {degree.get_text(strip=True)}, {row.br.next_sibling.strip()}")
 
-    # --- Extract Appointments ---
-    appt_header = soup.find(string=re.compile("Appointments:"))
-    if appt_header:
-        parent_p = appt_header.parent.parent
-        text = parent_p.get_text("\n")
-        lines = text.split("\n")
-        for line in lines:
-            line = line.strip()
-            if re.search(r"\d{4}.*\d{4}|\d{4}.*Present", line):
-                info["appointments"].append(line.replace("•", "").replace("&bull;", "").strip())
+    for row in soup.select("#appointments li"):
+        dates = row.select_one(".tenure").get_text(strip=True).removeprefix("Current · ")
+        info["appointments"].append(f"{dates}: {row.h3.get_text(strip=True)}, {row.p.get_text(strip=True)}")
 
-    # --- Extract Publications ---
-    pub_ul = soup.find("ul", id="publications-list")
-    if pub_ul:
-        for li in pub_ul.find_all("li"):
-            text = li.get_text(" ", strip=True)
-            text = re.sub(r"\s+", " ", text)
+    lead = soup.select_one("#projects .lead-copy")
+    info["projects"].append((lead.h3.get_text(strip=True), lead.a["href"], lead.p.get_text(strip=True)))
+    for card in soup.select("#work .engineering-card"):
+        info["projects"].append((card.h4.get_text(strip=True), card["href"], card.select_one(".card-summary").get_text(strip=True)))
 
-            # Keep inner HTML to preserve `<b>Yang, Y.</b>` in publications.
-            content_html = "".join([str(x) for x in li.contents])
+    for group in soup.select("#papers .pub-year"):
+        for entry in group.select("li"):
+            info["publications"].append({"year": group.h3.get_text(strip=True), "content": entry.decode_contents()})
 
-            info["publications"].append(
-                {"year": re.search(r"\((\d{4})\)", text).group(1) if re.search(r"\((\d{4})\)", text) else "Unknown",
-                 "content": content_html,
-                 "text": text}
-            )
-
-    # --- Extract Awards ---
-    for header in soup.find_all(["h2", "h3"]):
-        if "Grants & Awards" in header.get_text():
-            next_ul = header.find_next("ul")
-            if next_ul:
-                for li in next_ul.find_all("li"):
-                    text = li.get_text(" ", strip=True)
-                    text = re.sub(r"\s+", " ", text)
-                    info["awards"].append(text)
-            break
+    awards_file = REPO_ROOT / "_data" / "awards.yml"
+    for award in yaml.safe_load(awards_file.read_text(encoding="utf-8")):
+        info["awards"].append(f"{award['year']} {award['title']}, {award['organization']}")
 
     return info
 
@@ -213,7 +187,16 @@ def generate_cv_html(info: dict) -> str:
             margin-bottom: 15px;
         }
         
+        .publication-item p { margin: .25em 0 0; }
+        @media (max-width: 600px) {
+            body { margin: 0 auto; padding: 0; }
+            .cv-container { padding: 24px; }
+            header, .item { display: block; }
+            .contact-info { text-align: left; }
+        }
         @media print {
+            .item { break-inside: avoid; }
+            h2 { break-after: avoid; }
             body {
                 background-color: white;
                 margin: 0;
@@ -281,7 +264,7 @@ def generate_cv_html(info: dict) -> str:
     </section>
 
     <section>
-        <h2>Academic Appointments</h2>
+        <h2>Appointments</h2>
 """
 
     for appt in info["appointments"]:
@@ -299,6 +282,15 @@ def generate_cv_html(info: dict) -> str:
             <div class="item-content">{desc}</div>
         </div>
         """
+
+    html += """
+    </section>
+
+    <section>
+        <h2>Selected GIS &amp; GeoAI projects</h2>
+"""
+    for title, url, description in info["projects"]:
+        html += f'<p><strong><a href="{escape(url, quote=True)}">{escape(title)}</a></strong><br>{escape(description)}</p>'
 
     html += """
     </section>
@@ -325,7 +317,7 @@ def generate_cv_html(info: dict) -> str:
 """
 
     for award in info["awards"]:
-        match = re.match(r"^(\\d{4})\\s*(.*)", award)
+        match = re.match(r"^(\d{4})\s*(.*)", award)
         if match:
             year = match.group(1)
             desc = match.group(2)

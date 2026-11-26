@@ -15,6 +15,8 @@ import time
 from pathlib import Path
 
 import yaml
+from bs4 import BeautifulSoup
+from html import unescape
 from scholarly import scholarly
 
 SCRIPT_DIR = Path(__file__).resolve().parent
@@ -138,6 +140,59 @@ def fetch_and_parse_publications(scholar_id: str, delay_s: float = 1.0) -> list[
     return publications_data
 
 
+def update_year_groups(html, publications):
+    start = html.index('<div id="papers">')
+    end = html.index('</section>', start)
+    soup = BeautifulSoup(html[start:end], "html.parser")
+    papers = soup.select_one("#papers")
+    groups = {int(group.h3.get_text(strip=True)): group for group in papers.select(".pub-year")}
+    seen = {normalize_title(title.get_text(" ", strip=True)) for title in papers.select("li > a, li > span")}
+    added = 0
+    for pub in publications:
+        year, title = pub["year"], pub["title"]
+        key = normalize_title(title)
+        if not year or not key or key in seen:
+            continue
+        seen.add(key)
+        if year not in groups:
+            group = soup.new_tag("div", attrs={"class": "pub-year"})
+            group.append(soup.new_tag("h3"))
+            group.h3.string = str(year)
+            group.append(soup.new_tag("ul"))
+            older = [y for y in groups if y < year]
+            archive = papers.select_one(".older-pubs")
+            parent = archive if archive and year <= max(int(h.text) for h in archive.select("h3")) else papers
+            sibling = next((groups[y] for y in sorted(older, reverse=True) if groups[y].parent is parent), None)
+            if sibling:
+                sibling.insert_before(group)
+            elif parent is papers and archive:
+                archive.insert_before(group)
+            else:
+                parent.append(group)
+            groups[year] = group
+        item = soup.new_tag("li")
+        url = pub.get("doi_url") or ""
+        link = soup.new_tag("a", href=url) if url.startswith(("https://", "http://")) else soup.new_tag("span")
+        link.string = title
+        item.append(link)
+        details = soup.new_tag("p")
+        authors = BeautifulSoup(unescape(pub["authors"]), "html.parser").get_text(" ", strip=True)
+        location = str(pub.get("volume") or "")
+        if pub.get("issue"):
+            location += f"({pub['issue']})"
+        details.string = " · ".join(str(v) for v in (authors, pub["journal"], location, pub.get("pages")) if v)
+        item.append(details)
+        groups[year].ul.insert(0, item)
+        added += 1
+    if not added:
+        return html
+    archive = papers.select_one(".older-pubs")
+    if archive:
+        years = [int(h.text) for h in archive.select("h3")]
+        archive.summary.span.string = f"{min(years)}–{max(years)} · {len(archive.select('li'))} works"
+    return html[:start] + str(papers) + html[end:]
+
+
 def main():
     config = load_config()
     scholar_id = config.get("google_scholar_id")
@@ -158,6 +213,11 @@ def main():
     print(f"Collected {len(publications_data)} publications from Scholar.")
 
     html_content = HTML_FILE.read_text(encoding="utf-8")
+    if '<div id="papers">' in html_content:
+        updated = update_year_groups(html_content, publications_data)
+        if updated != html_content:
+            HTML_FILE.write_text(updated, encoding="utf-8")
+        return
     existing_titles = extract_existing_publications(html_content)
     existing_titles_norm = {normalize_title(t) for t in existing_titles}
     print(f"Found {len(existing_titles)} existing publications in index.html.")

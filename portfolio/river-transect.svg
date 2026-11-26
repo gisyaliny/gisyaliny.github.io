@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 205" role="img" aria-labelledby="title desc">
+  <title id="title">From a river transect to its elevation profile</title>
+  <desc id="desc">Conceptual illustration of the ArcMap add-in. Three lines cross a river. The gold A to B line corresponds to the profile at right. Shapes illustrate the method without measured terrain values.</desc>
+  <defs>
+    <clipPath id="map"><rect x="12" y="40" width="244" height="157"/></clipPath>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#36617a" stroke-width=".7"/></pattern>
+  </defs>
+  <rect width="600" height="205" fill="#092d4a"/>
+  <g fill="#f4f4eb" font-size="19" font-family="Palatino Linotype,Georgia,serif">
+    <text x="18" y="27">River transects</text><text x="317" y="27">Elevation along A–B</text>
+  </g>
+  <g clip-path="url(#map)">
+    <rect x="12" y="40" width="244" height="157" fill="#16435b"/>
+    <g fill="none" stroke="#6291a1" stroke-width="1.3">
+      <path id="bank" d="M25 214Q30 170 62 152T92 108Q94 89 120 78T157 33"/>
+      <use href="#bank" transform="translate(-18)"/><use href="#bank" transform="translate(-36)"/><use href="#bank" transform="translate(-54)"/>
+      <path id="slope" d="M104 214Q107 176 139 157T167 113Q168 103 185 95T231 33"/>
+      <use href="#slope" transform="translate(16)"/><use href="#slope" transform="translate(33)"/><use href="#slope" transform="translate(50)"/>
+    </g>
+    <path d="M73 207Q69 182 101 158T133 114Q129 98 154 89T200 35" fill="none" stroke="#9ddae6" stroke-width="6"/>
+    <g stroke="#dbe4e3" stroke-width="1.8"><path d="M116 54l70 52M61 143l71 52"/></g>
+    <path d="M90 88l91 66" stroke="#ffc52b" stroke-width="3"/>
+  </g>
+  <g fill="#ffcc42" font-size="16" font-family="Arial,sans-serif"><text x="76" y="88">A</text><text x="185" y="166">B</text></g>
+  <path d="M269 117h30m-8-7 8 7-8 7" fill="none" stroke="#eaaa00" stroke-width="2"/>
+  <rect x="315" y="45" width="267" height="120" fill="url(#grid)"/>
+  <path d="M315 46v119h267" fill="none" stroke="#8db4c4"/>
+  <path d="M316 67l24 8 21 16 24 7 23 18 19 5 22 23 13 4 19-17 17-8 21-24 20-10 20-18 22-7" fill="none" stroke="#ffc52b" stroke-width="3.3" stroke-linejoin="round"/>
+  <g fill="#f1f6f4" font-family="Arial,sans-serif" font-size="14"><text x="314" y="186">A</text><text x="379" y="186">Distance along section</text><text x="575" y="186">B</text></g>
+</svg>
