@@ -8,13 +8,13 @@
 .stage header .cv{color:#ffe49a;border-color:#eaaa0099}
 .stage header nav>a:not(.cv),.profile-menu summary{background:linear-gradient(95deg,#eaaa00,#9ddae6) left bottom/0 2px no-repeat;text-decoration:none;transition:background-size .25s ease,color .2s}
 .stage header nav>a:hover,.stage header nav>a:focus-visible,.profile-menu summary:hover,.profile-menu summary:focus-visible{background-size:100% 2px;color:white}
-.stage .intro{display:grid;justify-items:start;row-gap:clamp(.7rem,2.8svh,1.9rem);color:#fff;text-shadow:var(--type-shadow);width:43vw}
-@media(min-width:701px) and (min-height:501px) and (max-height:800px){.stage .intro{top:50%;row-gap:clamp(.75rem,2.1svh,1.1rem)}}
-.stage .intro #role{color:#ffe497;border:0;padding:0;margin:0;text-transform:uppercase;font:650 clamp(.85rem,1vw,1.05rem)/1.45 var(--display);letter-spacing:.12em}
-.stage .intro h1,.stage[data-step="0"] .intro h1{font:750 clamp(3.5rem,min(6.2vw,10svh),7rem)/1.06 var(--display);letter-spacing:-.058em;text-transform:uppercase;max-width:13ch;margin:clamp(.85rem,2svh,1.45rem) 0 0;color:#fff9e6}
-.stage[data-step="0"] .intro h1{font-size:clamp(5.5rem,min(10.5vw,18svh),12rem);max-width:5ch}
+.stage .intro{display:grid;justify-items:start;row-gap:clamp(.5rem,1.35svh,1rem);color:#fff;text-shadow:var(--type-shadow);width:43vw}
+@media(min-width:701px) and (min-height:501px) and (max-height:800px){.stage .intro{top:50%;row-gap:clamp(.45rem,1.15svh,.8rem)}}
+.stage .intro #role{color:#ffe497;border:0;padding:0;margin:0;text-transform:uppercase;font:650 clamp(.85rem,1vw,1.05rem)/1.45 var(--display);letter-spacing:.075em}
+.stage .intro h1,.stage[data-step="0"] .intro h1{font:750 clamp(3.3rem,min(5vw,9svh),6rem)/.98 var(--display);letter-spacing:-.058em;text-transform:uppercase;max-width:13ch;margin:clamp(.85rem,2svh,1.45rem) 0 0;color:#fff9e6}
+.stage[data-step="0"] .intro h1{font-size:clamp(5rem,min(9vw,16svh),10rem);max-width:5ch}
 .stage .intro h1 span{color:#eaaa00}
-.stage .intro #sub{font:italic clamp(1.3rem,min(2.1vw,4svh),2.15rem)/1.55 var(--display);max-width:32ch;text-wrap:pretty;color:#bbebf3;margin:clamp(1rem,2.4svh,1.85rem) 0 clamp(1.25rem,3.25svh,2.4rem)}
+.stage .intro #sub{font:italic clamp(1.12rem,min(1.6vw,3.6svh),1.68rem)/1.35 Georgia,serif;max-width:32ch;text-wrap:pretty;color:#bbebf3;margin:clamp(1rem,2.4svh,1.85rem) 0 clamp(1.25rem,3.25svh,2.4rem)}
 .stage .intro #proof{color:#ffe8a4;background:transparent;border:0;border-bottom:2px solid #eaaa00;padding:.26rem 0;font-weight:650}
 .stage .cover-index a,.stage .controls #jump{color:white;text-shadow:var(--type-shadow)}
 .stage .cover-index a:hover{color:#9ddae6}.stage #arrow{border-color:#f7f7f7}
@@ -57,10 +57,10 @@
  .works .sample img{transition:transform .35s ease}.works article:hover .sample img{transform:scale(1.035)}
 }
 @media(max-width:700px){
- .stage .intro{width:90vw;row-gap:clamp(.5rem,1.5svh,1rem)}.stage .intro #role{font-size:.76rem}
- .stage .intro h1,.stage[data-step="0"] .intro h1{max-width:none;font-size:clamp(2.1rem,8.3vw,3.8rem);margin:.65rem 0 0}
- .stage[data-step="0"] .intro h1{font-size:clamp(3.1rem,13vw,5rem)}
- .stage .intro #sub{font-size:clamp(1.08rem,4.45vw,1.4rem);line-height:1.4;margin:.7rem 0 1.1rem;max-width:35ch}
+ .stage .intro{width:90vw;row-gap:clamp(.35rem,1svh,.65rem)}.stage .intro #role{font-size:.76rem}
+ .stage .intro h1,.stage[data-step="0"] .intro h1{max-width:none;font-size:clamp(1.8rem,7vw,3.3rem);margin:.65rem 0 0}
+ .stage[data-step="0"] .intro h1{font-size:clamp(2.7rem,11vw,4.4rem)}
+ .stage .intro #sub{font-size:clamp(.98rem,3.8vw,1.17rem);line-height:1.35;margin:.7rem 0 1.1rem;max-width:35ch}
  .stage .intro #proof{font-size:.85rem}.stage .cover-index{margin-top:.55rem}
  .collection-head{align-items:start;flex-direction:column;gap:.5rem}
  .lead-story{grid-template-columns:1fr}.lead-copy{padding:1.5rem}.lead-copy h3{margin:.6rem 0}.lead-copy p{margin:.6rem 0}
@@ -70,7 +70,7 @@
  .archives span{width:100%;margin:0}.archives{gap:.6rem 1rem}
 }
 @media(max-height:500px) and (orientation:landscape){
- .stage .intro{width:48vw;top:47%;transform:translateY(-50%);row-gap:.4rem}.stage .intro h1,.stage[data-step="0"] .intro h1{font-size:2.5rem;max-width:18ch;margin:.45rem 0 0}.stage .intro #sub{font-size:1rem;margin:.6rem 0 .8rem;line-height:1.35}.stage .intro #role{font-size:.7rem}
+ .stage .intro{width:48vw;top:47%;transform:translateY(-50%);row-gap:.4rem}.stage .intro h1,.stage[data-step="0"] .intro h1{font-size:2.35rem;max-width:18ch;margin:.45rem 0 0}.stage .intro #sub{font-size:.95rem;margin:.6rem 0 .8rem;line-height:1.35}.stage .intro #role{font-size:.7rem}
 }
 
 /* Professional record */
@@ -176,7 +176,7 @@ footer{border-top:4px solid #eaaa00;background:#002855}
 #site-menu a:is(:hover,:focus-visible,[aria-current]){color:#ffda78;background-size:100% 2px}
 .menu-toggle{display:flex;align-items:center;gap:.65rem;padding:.6rem .8rem;min-height:42px;border:0;border-radius:3px;background:#eaaa00;color:#002855}
 .menu-toggle[hidden]{display:none}.menu-toggle i{width:14px;height:10px;border-block:2px solid currentColor;display:grid;align-items:center}.menu-toggle i::after{content:"";height:2px;background:currentColor}
-.stage .intro h1,.stage[data-step="0"] .intro h1{font-family:var(--display);font-weight:700;letter-spacing:-.048em}
+.stage .intro h1,.stage[data-step="0"] .intro h1{font-family:var(--display);font-weight:700;letter-spacing:-.058em}
 .stage .intro #role{font-family:var(--display);font-weight:600}
 .intro-actions{display:flex;align-items:center;column-gap:clamp(1.5rem,2.5vw,2.75rem)}
 .stage .intro #proof{background:#eaaa00;border:0;color:#002855;text-shadow:none;padding:.72rem 1rem;border-radius:2px;font:700 .88rem var(--display)}
@@ -284,7 +284,7 @@ footer{border-top:4px solid #eaaa00;background:#002855}
 /* Four equal stops let one indicator travel without measuring button widths. */
 .stage #chapters{position:relative;isolation:isolate;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;padding:4px;width:min(25rem,100%);border:1px solid #a4c5d288;border-radius:999px;background:#10232ef2;box-shadow:0 4px 18px #0003}
 .stage #chapters::before{content:"";position:absolute;z-index:-1;left:4px;top:4px;bottom:4px;width:calc((100% - 8px)/4);border-radius:999px;background:#f1b62a;transform:translateX(calc(var(--chapter-index,0) * 100%))}
-.stage #chapters button{border-radius:999px;min-height:44px;padding:.42rem .24rem;background:transparent;color:#e6f0f3;font:500 1rem/1.15 var(--display);white-space:nowrap}
+.stage #chapters button{border-radius:999px;min-height:44px;padding:.42rem .24rem;background:transparent;color:#e6f0f3;font:500 1rem/1.15 Georgia,serif;white-space:nowrap}
 .stage #chapters button[aria-current]{color:#09283b;background:transparent;border-radius:999px}
 .stage #chapters button:focus-visible{outline:2px solid white;outline-offset:-3px}
 @media(prefers-reduced-motion:no-preference){
