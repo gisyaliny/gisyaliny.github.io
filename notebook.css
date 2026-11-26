@@ -80,10 +80,10 @@
 .profile-portrait::before{content:"";position:absolute;inset:.65rem .65rem -.65rem -.65rem;border:2px solid #a37300}
 .profile-portrait img{display:block;position:relative;width:100%;height:auto;aspect-ratio:1.13;object-fit:cover;object-position:50% 40%}
 .profile-story h2,.education-strip>h3{font:650 .86rem/1.4 var(--display);letter-spacing:.05em;margin:0 0 .7rem}
-.profile-story h3{font:500 clamp(3rem,5.7vw,7rem)/.96 var(--display);letter-spacing:-.067em}
+.profile-story h3{font:500 clamp(3rem,5.7vw,7rem)/.96 Georgia,serif;letter-spacing:-.067em}
 .profile-story h3 span{font-size:.46em;letter-spacing:-.025em}.profile-story .native-name{color:#345971;letter-spacing:.17em;margin:.5rem 0 1.15rem}
 .profile-story .bio-lead{font:500 clamp(1.2rem,1.65vw,1.8rem)/1.34 var(--display);max-width:51ch}
-.profile-story p:not(.native-name):not(.bio-lead){max-width:70ch;color:#213d50}
+.profile-story p:not(.native-name):not(.bio-lead){font:1rem/1.5 "Segoe UI",Arial,sans-serif;max-width:70ch;color:#213d50}
 .profile-story .bio-links a{font-weight:650;color:#00487e}
 .education-strip{grid-column:1/-1;border-top:1px solid #8ea7b0;padding-top:1.1rem}
 .education-strip .record-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem}
@@ -93,7 +93,7 @@
 .education-strip time{margin-bottom:.4rem;color:#365267}
 .career{color:#f7f7ed;background:linear-gradient(118deg,#002855 5%,#083555 76%,#103f58);color-scheme:dark}
 .career-head,.bibliography>div:first-child{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
-.career-head h2,.bibliography #pub-title{font:500 clamp(2.7rem,5.7vw,6.6rem)/1 var(--display);letter-spacing:-.07em}
+.career-head h2{font:500 clamp(2.7rem,5.7vw,6.6rem)/1 var(--display);letter-spacing:-.07em}
 .career-head h2 span{color:#eaaa00}.career-head>a{color:#fed467;font-size:.95rem;font-weight:600}
 .career-axis{position:relative;margin:clamp(1.2rem,2vw,2.3rem) 0 .5rem 45%;height:1.3rem;color:#bbd8e5;font:.78rem/1.3 var(--display)}
 .career-axis span{position:absolute;transform:translateX(-50%)}
@@ -112,19 +112,20 @@
 .career-roles li:first-child .track i::after{width:14px;height:14px;background:transparent;border:2px solid #eaaa00}
 .career-roles li:nth-child(2) .track i::before{border-radius:0;transform:translate(-50%,-50%) rotate(45deg)}
 .career-roles li:nth-child(2) .track i::after{display:none}
-.bibliography{display:block;background:#f7f7f2;color:#002855}
+.bibliography #pub-title{font:500 clamp(2.7rem,5.7vw,6.6rem)/1 Georgia,serif;letter-spacing:-.07em}
+.bibliography{font:1rem/1.5 "Segoe UI",Arial,sans-serif;display:block;background:#f7f7f2;color:#002855}
 .bibliography>div:first-child{margin-bottom:clamp(1.7rem,3vw,3rem)}
 .bibliography .scholar-link{margin:0;font-weight:650;font-size:.93rem}
 .bibliography .pub-year{grid-template-columns:minmax(4rem,.22fr) minmax(0,1fr);gap:3%;border-top:1px solid #8a9baa;padding:1.25rem 0 .5rem}
-.bibliography .pub-year h3{font:500 clamp(1.65rem,3vw,3.4rem)/1 var(--display);color:#4b657b;letter-spacing:-.055em;margin:0}
+.bibliography .pub-year h3{font:500 clamp(1.65rem,3vw,3.4rem)/1 Georgia,serif;color:#4b657b;letter-spacing:-.055em;margin:0}
 .bibliography .pub-year li{margin:0 0 .78rem;padding:0 0 .8rem}
 .bibliography .pub-year li:last-child{border-bottom:0;margin-bottom:0}
-.bibliography .pub-year li>a{font:500 clamp(1.2rem,1.68vw,1.8rem)/1.26 var(--display);text-decoration:none}
+.bibliography .pub-year li>a{font:500 clamp(1.2rem,1.68vw,1.8rem)/1.26 Georgia,serif;text-decoration:none}
 .bibliography .pub-year li>a:is(:hover,:focus-visible){text-decoration:underline;text-decoration-thickness:1px}
 .bibliography #papers>.pub-year:first-child{border-top:3px solid #eaaa00}
 .bibliography .pub-year p{color:#425367}
 .older-pubs{border-block:1px solid #8a9baa}
-.older-pubs summary{padding:.85rem .15rem;color:#003962}.older-pubs summary span{margin-left:.8rem;font:500 .81rem var(--display);color:#4c6573}
+.older-pubs summary{padding:.85rem .15rem;color:#003962}.older-pubs summary span{margin-left:.8rem;font:500 .81rem "Courier New",monospace;color:#4c6573}
 @font-face{font-family:PortfolioIcons;src:url("portfolio/profile-links.woff2") format("woff2");font-display:swap}
 footer{border-top:4px solid #eaaa00;background:#002855}
 .footer-icons{display:flex;gap:clamp(.7rem,1.7vw,1.7rem);flex-wrap:wrap}
@@ -259,7 +260,8 @@ footer{border-top:4px solid #eaaa00;background:#002855}
 .appointment-line li:first-child .career-details{border-top:4px solid #eaaa00;padding:1.1rem 0 0}
 .appointment-line li:first-child h3{font:500 clamp(2.3rem,3.7vw,4.5rem)/1.05 var(--display);letter-spacing:-.05em;margin:.65rem 0}
 .appointment-line li:first-child p{max-width:37ch;font-size:1rem}
-.contact-footer{display:block;background:linear-gradient(112deg,#17232d,#082e4a);color:#f6f6ec;border-top:3px solid #eaaa00;padding:clamp(2rem,4.2vw,4.5rem) 5vw 1.15rem}
+.contact-main h2{font-family:Georgia,serif}
+.contact-footer{font-family:"Segoe UI",Arial,sans-serif;display:block;background:linear-gradient(112deg,#17232d,#082e4a);color:#f6f6ec;border-top:3px solid #eaaa00;padding:clamp(2rem,4.2vw,4.5rem) 5vw 1.15rem}
 .contact-main,.contact-base{width:100%;max-width:1600px;margin:auto;display:flex;justify-content:space-between;gap:1.25rem}
 .contact-main{align-items:start}.contact-main h2 span{color:#eaaa00}.contact-main .email{color:#ffda77}
 .contact-profiles{display:grid;justify-items:end;gap:1rem}.contact-profiles address{text-align:right;margin:0}
@@ -345,6 +347,8 @@ footer{border-top:4px solid #eaaa00;background:#002855}
 }
 .profile-sheet, .career, #notebook, .bibliography {
   padding-block: var(--section-space);
+}
+.profile-sheet, .career, #notebook {
   font-size: var(--body-size);
   line-height: 1.55;
 }
@@ -354,13 +358,11 @@ footer{border-top:4px solid #eaaa00;background:#002855}
 .profile-sheet { row-gap: clamp(1.5rem, 2.5vw, 2.25rem); }
 .appointment-line { column-gap: 5%; }
 .career-details p, .lead-copy p, .engineering-card .card-summary,
-.bibliography .pub-year p, .education-strip .record-list li {
+.education-strip .record-list li {
   font-size: var(--body-size);
   line-height: 1.5;
 }
-.bibliography .pub-year { grid-template-columns: 5ch minmax(0, 1fr); column-gap: 2rem; }
-.bibliography .pub-year h3 { font-size: clamp(1.35rem, 1.8vw, 2rem); }
-.collection-head h2, .career-head h2, .bibliography #pub-title {
+.collection-head h2, .career-head h2 {
   font-size: clamp(2.4rem, 4.3vw, 4.8rem);
   font-weight: 600;
   letter-spacing: -.055em;
