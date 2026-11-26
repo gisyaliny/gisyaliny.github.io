@@ -10,11 +10,11 @@
 .stage header nav>a:hover,.stage header nav>a:focus-visible,.profile-menu summary:hover,.profile-menu summary:focus-visible{background-size:100% 2px;color:white}
 .stage .intro{display:grid;justify-items:start;row-gap:clamp(.7rem,2.8svh,1.9rem);color:#fff;text-shadow:var(--type-shadow);width:43vw}
 @media(min-width:701px) and (min-height:501px) and (max-height:800px){.stage .intro{top:50%;row-gap:clamp(.75rem,2.1svh,1.1rem)}}
-.stage .intro #role{color:#ffe497;border:0;padding:0;margin:0;text-transform:uppercase;font:650 clamp(.85rem,1vw,1.05rem)/1.45 var(--mono);letter-spacing:.12em}
-.stage .intro h1,.stage[data-step="0"] .intro h1{font:750 clamp(3.5rem,min(6.2vw,10svh),7rem)/1.06 "Bahnschrift","Arial Narrow",Arial,sans-serif;letter-spacing:-.058em;text-transform:uppercase;max-width:13ch;margin:clamp(.85rem,2svh,1.45rem) 0 0;color:#fff9e6}
+.stage .intro #role{color:#ffe497;border:0;padding:0;margin:0;text-transform:uppercase;font:650 clamp(.85rem,1vw,1.05rem)/1.45 var(--display);letter-spacing:.12em}
+.stage .intro h1,.stage[data-step="0"] .intro h1{font:750 clamp(3.5rem,min(6.2vw,10svh),7rem)/1.06 var(--display);letter-spacing:-.058em;text-transform:uppercase;max-width:13ch;margin:clamp(.85rem,2svh,1.45rem) 0 0;color:#fff9e6}
 .stage[data-step="0"] .intro h1{font-size:clamp(5.5rem,min(10.5vw,18svh),12rem);max-width:5ch}
 .stage .intro h1 span{color:#eaaa00}
-.stage .intro #sub{font:italic clamp(1.3rem,min(2.1vw,4svh),2.15rem)/1.55 Georgia,serif;max-width:32ch;text-wrap:pretty;color:#bbebf3;margin:clamp(1rem,2.4svh,1.85rem) 0 clamp(1.25rem,3.25svh,2.4rem)}
+.stage .intro #sub{font:italic clamp(1.3rem,min(2.1vw,4svh),2.15rem)/1.55 var(--display);max-width:32ch;text-wrap:pretty;color:#bbebf3;margin:clamp(1rem,2.4svh,1.85rem) 0 clamp(1.25rem,3.25svh,2.4rem)}
 .stage .intro #proof{color:#ffe8a4;background:transparent;border:0;border-bottom:2px solid #eaaa00;padding:.26rem 0;font-weight:650}
 .stage .cover-index a,.stage .controls #jump{color:white;text-shadow:var(--type-shadow)}
 .stage .cover-index a:hover{color:#9ddae6}.stage #arrow{border-color:#f7f7f7}
@@ -22,20 +22,20 @@
 #notebook{padding:clamp(2.5rem,5vw,6rem) 5vw;background:#f5f5f0;color:#002855}
 .collection-head,.archives,.lead-story,.portal-grid{max-width:1600px;margin-inline:auto}
 .collection-head{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;padding:0 0 1.4rem}
-.collection-head h2{font:500 clamp(2.7rem,5.5vw,6.6rem)/1 Georgia,serif;letter-spacing:-.07em}
+.collection-head h2{font:500 clamp(2.7rem,5.5vw,6.6rem)/1 var(--display);letter-spacing:-.07em}
 .collection-head h2 span{color:#a57200}.collection-head>a,.archives a{font-weight:650;font-size:.88rem}
 .lead-story,.portal{color:inherit;text-decoration:none;display:block}
 .lead-story{display:grid;grid-template-columns:minmax(0,.84fr) minmax(0,1.16fr);align-items:center;background:#002855;color:white;position:relative;overflow:hidden}
 .lead-copy{padding:clamp(1.8rem,3.5vw,4rem)}
-.discipline{font:650 .77rem/1.4 var(--mono);letter-spacing:.035em}
+.discipline{font:650 .77rem/1.4 var(--display);letter-spacing:.035em}
 .lead-copy .discipline{color:#ffcf54}
-.lead-copy h3{font:500 clamp(2.6rem,4.8vw,6rem)/.96 Georgia,serif;letter-spacing:-.06em;margin:1rem 0}
+.lead-copy h3{font:500 clamp(2.6rem,4.8vw,6rem)/.96 var(--display);letter-spacing:-.06em;margin:1rem 0}
 .lead-copy p,.portal-caption p{font-size:clamp(.94rem,1.15vw,1.15rem);line-height:1.5}
 .lead-copy p{max-width:43ch;color:#d3e8f4}
 .lead-copy strong{display:inline-block;color:#ffd35e;margin:.3rem 0;border-bottom:1px solid #eaaa00;padding-bottom:.2em}
 .project-image{margin:0;align-self:stretch;display:grid;align-content:center;padding:7% 5%;background-color:#154a69;background-image:linear-gradient(135deg,#28678388,transparent 62%),repeating-linear-gradient(0deg,transparent 0 23px,#9ddae618 23px 24px),repeating-linear-gradient(90deg,transparent 0 23px,#9ddae618 23px 24px);overflow:hidden}
 .project-image img{width:100%;height:auto;box-shadow:0 12px 26px #00132950}
-.project-image figcaption{display:flex;justify-content:space-between;color:#deedf4;margin-top:.7rem;font:.73rem var(--mono)}
+.project-image figcaption{display:flex;justify-content:space-between;color:#deedf4;margin-top:.7rem;font:.73rem var(--display)}
 .portal-grid{display:grid;grid-template-columns:1.15fr 1fr 1fr;gap:clamp(1.1rem,2.4vw,2.8rem);padding:clamp(1.5rem,3vw,3.4rem) 0}
 .portal figure{margin:0;height:clamp(170px,16.5vw,300px);overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center}
 .studio-plate{background:radial-gradient(ellipse at 38% 42%,#205472,#051c36);gap:0}
@@ -45,11 +45,11 @@
 .chart-plate img{max-width:88%;max-height:85%;width:auto;height:auto;object-fit:contain;box-shadow:0 5px 12px #0028551a}
 .portal-caption{padding:.95rem 1.5rem 0 0;position:relative}
 .portal-caption .discipline{color:#32596f}
-.portal-caption h3{font:600 clamp(1.5rem,2vw,2.6rem)/1.05 Georgia,serif;letter-spacing:-.045em;margin:.42rem 0}
+.portal-caption h3{font:600 clamp(1.5rem,2vw,2.6rem)/1.05 var(--display);letter-spacing:-.045em;margin:.42rem 0}
 .portal-caption p{color:#354852;margin:.35rem 0;max-width:40ch}
 .portal-caption b{position:absolute;right:.1rem;top:1.2rem;font-size:1.2rem}
 .archives{border-block:1px solid #95a9b3;padding:.85rem 0;display:flex;gap:.65rem 1.5rem;flex-wrap:wrap;justify-content:flex-start}
-.archives span{margin-right:auto;font:600 .82rem var(--mono)}
+.archives span{margin-right:auto;font:600 .82rem var(--display)}
 @media(prefers-reduced-motion:no-preference){
  .portal img,.project-image img,.portal-caption b{transition:transform .45s cubic-bezier(.2,.7,.2,1)}
  .portal:is(:hover,:focus-visible) img,.lead-story:is(:hover,:focus-visible) img{transform:translateY(-3px) scale(1.025)}
@@ -79,30 +79,30 @@
 .profile-portrait{position:relative;margin:0 0 .65rem .65rem}
 .profile-portrait::before{content:"";position:absolute;inset:.65rem .65rem -.65rem -.65rem;border:2px solid #a37300}
 .profile-portrait img{display:block;position:relative;width:100%;height:auto;aspect-ratio:1.13;object-fit:cover;object-position:50% 40%}
-.profile-story h2,.education-strip>h3{font:650 .86rem/1.4 var(--mono);letter-spacing:.05em;margin:0 0 .7rem}
-.profile-story h3{font:500 clamp(3rem,5.7vw,7rem)/.96 Georgia,serif;letter-spacing:-.067em}
+.profile-story h2,.education-strip>h3{font:650 .86rem/1.4 var(--display);letter-spacing:.05em;margin:0 0 .7rem}
+.profile-story h3{font:500 clamp(3rem,5.7vw,7rem)/.96 var(--display);letter-spacing:-.067em}
 .profile-story h3 span{font-size:.46em;letter-spacing:-.025em}.profile-story .native-name{color:#345971;letter-spacing:.17em;margin:.5rem 0 1.15rem}
-.profile-story .bio-lead{font:500 clamp(1.2rem,1.65vw,1.8rem)/1.34 Georgia,serif;max-width:51ch}
+.profile-story .bio-lead{font:500 clamp(1.2rem,1.65vw,1.8rem)/1.34 var(--display);max-width:51ch}
 .profile-story p:not(.native-name):not(.bio-lead){max-width:70ch;color:#213d50}
 .profile-story .bio-links a{font-weight:650;color:#00487e}
 .education-strip{grid-column:1/-1;border-top:1px solid #8ea7b0;padding-top:1.1rem}
 .education-strip .record-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem}
 .education-strip .record-list li{display:block;border:0;padding:0 .9rem 0 0}
 .education-strip li+li{border-left:1px solid #aebdc2!important;padding-left:1.3rem!important}
-.education-strip time,.tenure{display:block;font:600 .82rem/1.4 var(--mono);font-variant-numeric:tabular-nums}
+.education-strip time,.tenure{display:block;font:600 .82rem/1.4 var(--display);font-variant-numeric:tabular-nums}
 .education-strip time{margin-bottom:.4rem;color:#365267}
 .career{color:#f7f7ed;background:linear-gradient(118deg,#002855 5%,#083555 76%,#103f58);color-scheme:dark}
 .career-head,.bibliography>div:first-child{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
-.career-head h2,.bibliography #pub-title{font:500 clamp(2.7rem,5.7vw,6.6rem)/1 Georgia,serif;letter-spacing:-.07em}
+.career-head h2,.bibliography #pub-title{font:500 clamp(2.7rem,5.7vw,6.6rem)/1 var(--display);letter-spacing:-.07em}
 .career-head h2 span{color:#eaaa00}.career-head>a{color:#fed467;font-size:.95rem;font-weight:600}
-.career-axis{position:relative;margin:clamp(1.2rem,2vw,2.3rem) 0 .5rem 45%;height:1.3rem;color:#bbd8e5;font:.78rem/1.3 var(--mono)}
+.career-axis{position:relative;margin:clamp(1.2rem,2vw,2.3rem) 0 .5rem 45%;height:1.3rem;color:#bbd8e5;font:.78rem/1.3 var(--display)}
 .career-axis span{position:absolute;transform:translateX(-50%)}
 .career-axis span:first-child{left:0;transform:none}.career-axis span:nth-child(2){left:25%}.career-axis span:nth-child(3){left:50%}.career-axis span:nth-child(4){left:75%}.career-axis span:last-child{right:0;transform:none;color:#ffd04f}
 .career-roles{margin:0;padding:0;list-style:none}
 .career-roles li{display:grid;grid-template-columns:41% 55%;gap:4%;border-top:1px solid #587589;align-items:stretch}
 .career-details{padding:.95rem 0 1.05rem}
 .career-details .tenure{color:#afd7e3;margin-bottom:.3rem}
-.career-details h3{font:600 clamp(1.15rem,1.8vw,1.95rem)/1.14 "Segoe UI",Arial,sans-serif;letter-spacing:-.025em}
+.career-details h3{font:600 clamp(1.15rem,1.8vw,1.95rem)/1.14 var(--display);letter-spacing:-.025em}
 .career-details p{margin:.22rem 0 0;color:#c9dce8;font-size:.91rem}
 .career-roles li:first-child .tenure{color:#ffd34e}
 .track{align-self:stretch;position:relative;border-right:1px solid #7397ac44;background:repeating-linear-gradient(to right,#85aabd44 0 1px,transparent 1px 25%)}
@@ -116,15 +116,15 @@
 .bibliography>div:first-child{margin-bottom:clamp(1.7rem,3vw,3rem)}
 .bibliography .scholar-link{margin:0;font-weight:650;font-size:.93rem}
 .bibliography .pub-year{grid-template-columns:minmax(4rem,.22fr) minmax(0,1fr);gap:3%;border-top:1px solid #8a9baa;padding:1.25rem 0 .5rem}
-.bibliography .pub-year h3{font:500 clamp(1.65rem,3vw,3.4rem)/1 Georgia,serif;color:#4b657b;letter-spacing:-.055em;margin:0}
+.bibliography .pub-year h3{font:500 clamp(1.65rem,3vw,3.4rem)/1 var(--display);color:#4b657b;letter-spacing:-.055em;margin:0}
 .bibliography .pub-year li{margin:0 0 .78rem;padding:0 0 .8rem}
 .bibliography .pub-year li:last-child{border-bottom:0;margin-bottom:0}
-.bibliography .pub-year li>a{font:500 clamp(1.2rem,1.68vw,1.8rem)/1.26 Georgia,serif;text-decoration:none}
+.bibliography .pub-year li>a{font:500 clamp(1.2rem,1.68vw,1.8rem)/1.26 var(--display);text-decoration:none}
 .bibliography .pub-year li>a:is(:hover,:focus-visible){text-decoration:underline;text-decoration-thickness:1px}
 .bibliography #papers>.pub-year:first-child{border-top:3px solid #eaaa00}
 .bibliography .pub-year p{color:#425367}
 .older-pubs{border-block:1px solid #8a9baa}
-.older-pubs summary{padding:.85rem .15rem;color:#003962}.older-pubs summary span{margin-left:.8rem;font:500 .81rem var(--mono);color:#4c6573}
+.older-pubs summary{padding:.85rem .15rem;color:#003962}.older-pubs summary span{margin-left:.8rem;font:500 .81rem var(--display);color:#4c6573}
 @font-face{font-family:PortfolioIcons;src:url("portfolio/profile-links.woff2") format("woff2");font-display:swap}
 footer{border-top:4px solid #eaaa00;background:#002855}
 .footer-icons{display:flex;gap:clamp(.7rem,1.7vw,1.7rem);flex-wrap:wrap}
@@ -137,7 +137,7 @@ footer{border-top:4px solid #eaaa00;background:#002855}
 .works .river-story>.medium,.works .river-story>h3,.works .river-story>p:not(.medium),.works .river-story>a{grid-column:1;grid-row:auto}
 .river-method{margin:0;grid-column:2;grid-row:1/5;align-self:center;width:100%}
 .river-method img{width:100%;display:block;height:auto}
-.river-method figcaption{margin:.5rem 0 0;color:#40576b;font:.77rem/1.3 var(--mono)}
+.river-method figcaption{margin:.5rem 0 0;color:#40576b;font:.77rem/1.3 var(--display)}
 @supports (animation-timeline:view()){
  @media(prefers-reduced-motion:no-preference){
   .track i{animation:show-tenure linear both;animation-timeline:view(block);animation-range:entry 0% entry 95%}
@@ -164,7 +164,7 @@ footer{border-top:4px solid #eaaa00;background:#002855}
 @media(prefers-reduced-motion:reduce){.footer-icons i{transition:none}.footer-icons a:is(:hover,:focus-visible) i{transform:none}}
 @font-face{font-family:"Kaushan Script";src:url("portfolio/yalin-signature.woff2") format("woff2");font-weight:400;font-display:swap}
 @font-face{font-family:Montserrat;src:url("portfolio/montserrat-latin.woff2") format("woff2");font-weight:400 700;font-display:swap}
-:root{--display:Montserrat,"Segoe UI",Arial,sans-serif;scroll-padding-top:68px}
+:root{scroll-padding-top:68px}
 .skip:focus{z-index:12}
 .masthead{position:fixed;z-index:9;top:0;inset-inline:0;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.15rem 5vw;background:transparent;border:0;color:white;text-shadow:0 1px 6px #141414}
 .signature{font:400 clamp(1.65rem,2.5vw,2.55rem)/1.25 "Kaushan Script",cursive;color:#ffce49;white-space:nowrap;text-decoration:none}
@@ -219,17 +219,17 @@ footer{border-top:4px solid #eaaa00;background:#002855}
 /* A static example of the path from statewide geography to one county report. */
 .product-link{display:inline-block;color:#ffda73;font:650 .96rem var(--display);text-underline-offset:.25em}
 .county-guide{margin:0;padding:clamp(1.3rem,2.4vw,3rem);background:#eaf0eb;color:#002855;align-self:stretch;display:flex;flex-direction:column;justify-content:center}
-.county-guide figcaption{font:550 clamp(1.45rem,2.3vw,2.6rem)/1.12 Georgia,serif;letter-spacing:-.035em;max-width:28ch}
+.county-guide figcaption{font:550 clamp(1.45rem,2.3vw,2.6rem)/1.12 var(--display);letter-spacing:-.035em;max-width:28ch}
 .county-steps{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);margin:1.1rem 0 .7rem;padding:0;list-style:none;border-block:1px solid #9caeb4}
 .county-steps li{padding:1rem 0}.county-steps h4{font:650 .85rem/1.45 var(--display);margin:0;color:#14415c}
-.county-steps h4 span{font:.72rem var(--mono);color:#475b64;margin-right:.25rem}
+.county-steps h4 span{font:.72rem var(--display);color:#475b64;margin-right:.25rem}
 .county-steps img{display:block;width:100%;height:auto}
 .county-steps li:nth-child(2){border-left:1px solid #aabbbd;padding-left:clamp(.6rem,1.4vw,1.5rem)}
 .county-steps strong{font:650 clamp(2.3rem,4.1vw,4.8rem)/1 var(--display);letter-spacing:-.075em;display:block;margin:.7rem 0 .3rem}
 .county-steps p{font-size:.9rem;line-height:1.35;margin:0}.county-steps .county-share{margin-top:.7rem;padding-top:.5rem;border-top:2px solid #eaaa00;color:#394d59}
 .county-steps li:last-child{grid-column:1/-1;padding:.75rem 0;border-top:1px solid #aabbbd;display:flex;justify-content:space-between;align-items:baseline;gap:.5rem;flex-wrap:wrap}
 .county-steps a{font:650 .86rem/1.4 var(--display);text-underline-offset:.22em}
-.county-guide small{font:.69rem/1.45 var(--mono);color:#465d68}
+.county-guide small{font:.69rem/1.45 var(--display);color:#465d68}
 .contact-footer a:hover,.contact-footer a:focus-visible{text-decoration:none}
 .contact-footer a:focus-visible{outline:2px solid #eaaa00;outline-offset:4px}
 .shelf-heading{margin:clamp(1.8rem,3.4vw,4.2rem) 0 0;padding-top:.8rem;border-top:1px solid #9aaab0;font:600 clamp(1.2rem,1.7vw,2rem)/1.2 var(--display);letter-spacing:-.035em}
@@ -257,7 +257,7 @@ footer{border-top:4px solid #eaaa00;background:#002855}
 .appointment-line li:first-child{grid-column:1;grid-row:1/5;padding:0}
 .appointment-line li:first-child::before,.appointment-line li:first-child::after{display:none}
 .appointment-line li:first-child .career-details{border-top:4px solid #eaaa00;padding:1.1rem 0 0}
-.appointment-line li:first-child h3{font:500 clamp(2.3rem,3.7vw,4.5rem)/1.05 Georgia,serif;letter-spacing:-.05em;margin:.65rem 0}
+.appointment-line li:first-child h3{font:500 clamp(2.3rem,3.7vw,4.5rem)/1.05 var(--display);letter-spacing:-.05em;margin:.65rem 0}
 .appointment-line li:first-child p{max-width:37ch;font-size:1rem}
 .contact-footer{display:block;background:linear-gradient(112deg,#17232d,#082e4a);color:#f6f6ec;border-top:3px solid #eaaa00;padding:clamp(2rem,4.2vw,4.5rem) 5vw 1.15rem}
 .contact-main,.contact-base{width:100%;max-width:1600px;margin:auto;display:flex;justify-content:space-between;gap:1.25rem}
@@ -284,14 +284,14 @@ footer{border-top:4px solid #eaaa00;background:#002855}
 /* Four equal stops let one indicator travel without measuring button widths. */
 .stage #chapters{position:relative;isolation:isolate;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;padding:4px;width:min(25rem,100%);border:1px solid #a4c5d288;border-radius:999px;background:#10232ef2;box-shadow:0 4px 18px #0003}
 .stage #chapters::before{content:"";position:absolute;z-index:-1;left:4px;top:4px;bottom:4px;width:calc((100% - 8px)/4);border-radius:999px;background:#f1b62a;transform:translateX(calc(var(--chapter-index,0) * 100%))}
-.stage #chapters button{border-radius:999px;min-height:44px;padding:.42rem .24rem;background:transparent;color:#e6f0f3;font:500 1rem/1.15 Georgia,serif;white-space:nowrap}
+.stage #chapters button{border-radius:999px;min-height:44px;padding:.42rem .24rem;background:transparent;color:#e6f0f3;font:500 1rem/1.15 var(--display);white-space:nowrap}
 .stage #chapters button[aria-current]{color:#09283b;background:transparent;border-radius:999px}
 .stage #chapters button:focus-visible{outline:2px solid white;outline-offset:-3px}
 @media(prefers-reduced-motion:no-preference){
  .stage #chapters::before{transition:transform .44s cubic-bezier(.22,.84,.25,1)}
  .stage #chapters button{transition:color .18s ease}
 }
-#notebook .shelf-heading{font:500 clamp(1.65rem,2.6vw,3rem)/1.12 Georgia,serif;letter-spacing:-.044em}
+#notebook .shelf-heading{font:500 clamp(1.65rem,2.6vw,3rem)/1.12 var(--display);letter-spacing:-.044em}
 @media(max-width:700px){
  .stage #chapters{width:min(100%,23rem);margin-left:auto}
  .stage #chapters button{font-size:clamp(.78rem,3.45vw,.96rem)}
@@ -306,7 +306,7 @@ footer{border-top:4px solid #eaaa00;background:#002855}
 .image-pair{gap:.35rem;padding:.55rem}.image-pair img{width:40%;height:100%}.image-pair span{color:#ffd466;font-size:1.15rem}
 .river-plate{background:#092d4a}.gps-plate{background:#142e42}
 .engineering-type{margin:.85rem 0 .25rem;font:600 .72rem/1.3 var(--display);letter-spacing:.025em;color:#3e6478}
-.engineering-card h4{font:500 clamp(1.3rem,1.8vw,2.1rem)/1.1 Georgia,serif;letter-spacing:-.042em;margin:0 0 .8rem;color:#002855}
+.engineering-card h4{font:500 clamp(1.3rem,1.8vw,2.1rem)/1.1 var(--display);letter-spacing:-.042em;margin:0 0 .8rem;color:#002855}
 
 
 .engineering-link{margin-top:auto;padding:.35rem 0 .7rem;font:650 .81rem/1.3 var(--display);color:#003b60}
@@ -319,7 +319,7 @@ footer{border-top:4px solid #eaaa00;background:#002855}
  .engineering-card h4{font-size:1.45rem}
 }
 
-.engineering-card .card-summary{font:.96rem/1.5 "Segoe UI",sans-serif;color:#344958;margin:0 0 1rem;max-width:48ch}
+.engineering-card .card-summary{font:.96rem/1.5 var(--display);color:#344958;margin:0 0 1rem;max-width:48ch}
 .portal-entry figcaption{padding-top:.8rem}
 .portal-entry h4{display:flex;align-items:baseline;justify-content:space-between;gap:.5rem;margin-bottom:.45rem}
 .portal-entry h4 span{font:500 1rem var(--display);color:#446575}
@@ -331,4 +331,53 @@ footer{border-top:4px solid #eaaa00;background:#002855}
  .engineering-card:is(:hover,:focus-visible){transform:scale(1.025);position:relative;z-index:1}
  .engineering-plate img{transition:transform .35s cubic-bezier(.2,.7,.25,1)}
  .engineering-card:is(:hover,:focus-visible) .engineering-plate img{transform:scale(1.035)}
+}
+
+/* Reading layout: the type and navigation share a column over full-width artwork. */
+:root {
+  --page-gutter: clamp(5%, calc(65% - 36rem), 20%);
+  --section-space: clamp(2.25rem, 3.6vw, 4rem);
+  --body-size: clamp(1.0625rem, 1.25vw, 1.1875rem);
+}
+
+.masthead, .profile-sheet, .career, #notebook, .bibliography, .contact-footer {
+  padding-inline: var(--page-gutter);
+}
+.profile-sheet, .career, #notebook, .bibliography {
+  padding-block: var(--section-space);
+  font-size: var(--body-size);
+  line-height: 1.55;
+}
+.stage .intro { left: var(--page-gutter); }
+.stage .controls { inset-inline: var(--page-gutter); }
+.collection-head, .career-head { padding-bottom: 1rem; }
+.profile-sheet { row-gap: clamp(1.5rem, 2.5vw, 2.25rem); }
+.appointment-line { column-gap: 5%; }
+.career-details p, .lead-copy p, .engineering-card .card-summary,
+.bibliography .pub-year p, .education-strip .record-list li {
+  font-size: var(--body-size);
+  line-height: 1.5;
+}
+.bibliography .pub-year { grid-template-columns: 5ch minmax(0, 1fr); column-gap: 2rem; }
+.bibliography .pub-year h3 { font-size: clamp(1.35rem, 1.8vw, 2rem); }
+.collection-head h2, .career-head h2, .bibliography #pub-title {
+  font-size: clamp(2.4rem, 4.3vw, 4.8rem);
+  font-weight: 600;
+  letter-spacing: -.055em;
+}
+#projects { container-type: inline-size; }
+.lead-copy, .county-guide { padding: clamp(1.2rem, 3.5cqw, 2.5rem); }
+.lead-copy h3 { font-size: clamp(2rem, 4.6cqw, 3.6rem); }
+.county-guide figcaption { font-size: clamp(1.25rem, 2.65cqw, 2rem); }
+.engineering-card h4 { font-weight: 600; }
+.contact-base { flex-wrap: wrap; }
+
+@media (min-width: 1100px) {
+  .stage .intro { width: min(38vw, 42rem); }
+  #site-menu { gap: clamp(.35rem, .7vw, .9rem); }
+  #site-menu a { font-size: .8rem; letter-spacing: .035em; }
+}
+@media (max-width: 700px) {
+  .career-head { flex-wrap: wrap; gap: .5rem 1rem; }
+  .bibliography .pub-year { grid-template-columns: 1fr; }
 }

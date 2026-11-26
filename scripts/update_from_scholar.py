@@ -172,7 +172,7 @@ def update_year_groups(html, publications):
             groups[year] = group
         item = soup.new_tag("li")
         url = pub.get("doi_url") or ""
-        link = soup.new_tag("a", href=url) if url.startswith(("https://", "http://")) else soup.new_tag("span")
+        link = soup.new_tag("a", href=url, target="_blank", rel="noopener noreferrer") if url.startswith(("https://", "http://")) else soup.new_tag("span")
         link.string = title
         item.append(link)
         details = soup.new_tag("p")

@@ -76,10 +76,15 @@ def generate_cv_html(info: dict) -> str:
     """
     css = """
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
+        @font-face {
+            font-family: Montserrat;
+            src: url("portfolio/montserrat-latin.woff2") format("woff2");
+            font-weight: 400 700;
+            font-display: swap;
+        }
         
         body {
-            font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+            font-family: Montserrat, 'Segoe UI', Arial, sans-serif;
             color: #333;
             line-height: 1.5;
             max-width: 850px;
@@ -114,7 +119,7 @@ def generate_cv_html(info: dict) -> str:
         }
         
         h1 {
-            font-family: 'Merriweather', serif;
+            font-family: inherit;
             font-size: 32px;
             color: #2c3e50;
             margin: 0 0 10px 0;
@@ -144,7 +149,7 @@ def generate_cv_html(info: dict) -> str:
         }
         
         h2 {
-            font-family: 'Merriweather', serif;
+            font-family: inherit;
             font-size: 20px;
             color: #2c3e50;
             border-bottom: 3px solid #f1f1f1;
@@ -219,6 +224,7 @@ def generate_cv_html(info: dict) -> str:
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base target="_blank">
     <title>{info['name']} - Curriculum Vitae</title>
     {css}
 </head>
