@@ -125,7 +125,7 @@
 .bibliography .pub-year p{color:#425367}
 .older-pubs{border-block:1px solid #8a9baa}
 .older-pubs summary{padding:.85rem .15rem;color:#003962}.older-pubs summary span{margin-left:.8rem;font:500 .81rem var(--mono);color:#4c6573}
-@font-face{font-family:PortfolioIcons;src:url("portfolio/fontawesome-webfont.woff2") format("woff2");font-display:swap}
+@font-face{font-family:PortfolioIcons;src:url("portfolio/profile-links.woff2") format("woff2");font-display:swap}
 footer{border-top:4px solid #eaaa00;background:#002855}
 .footer-icons{display:flex;gap:clamp(.7rem,1.7vw,1.7rem);flex-wrap:wrap}
 .footer-icons a{display:grid;justify-items:center;gap:.4rem;min-width:44px;font-size:.77rem}
@@ -162,7 +162,7 @@ footer{border-top:4px solid #eaaa00;background:#002855}
  .works .river-story>a{display:inline-block;margin:.5rem 0 .85rem}.river-method figcaption{font-size:.72rem}
 }
 @media(prefers-reduced-motion:reduce){.footer-icons i{transition:none}.footer-icons a:is(:hover,:focus-visible) i{transform:none}}
-@font-face{font-family:"Kaushan Script";src:url("portfolio/kaushanscript-latin.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Kaushan Script";src:url("portfolio/yalin-signature.woff2") format("woff2");font-weight:400;font-display:swap}
 @font-face{font-family:Montserrat;src:url("portfolio/montserrat-latin.woff2") format("woff2");font-weight:400 700;font-display:swap}
 :root{--display:Montserrat,"Segoe UI",Arial,sans-serif;scroll-padding-top:68px}
 .skip:focus{z-index:12}
