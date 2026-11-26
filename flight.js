@@ -56,7 +56,7 @@
   // Only the imagery inside each georeferenced footprint is sampled. Adjacent
   // resolutions overlap, keeping a feature in place as its fine detail appears.
   function createGl() {
-    const gl = canvas.getContext('webgl', {alpha:true, antialias:false, depth:false, premultipliedAlpha:false});
+    const gl = canvas.getContext('webgl', {alpha:true, antialias:false, depth:false, premultipliedAlpha:true});
     if (!gl) return null;
     const program = gl.createProgram();
     function compile(type, source) {
@@ -86,7 +86,8 @@
         float d=length(q);
         if(d>=1.){
           float halo=exp(-min(80.,(d-1.)*43.))*.43*(1.-fade);
-          gl_FragColor=vec4(.30,.68,.84,halo);return;
+          // Premultiplied output leaves the CSS sky visible beyond the atmospheric rim.
+          gl_FragColor=vec4(vec3(.30,.68,.84)*halo,halo);return;
         }
         float z=sqrt(max(0.,1.-d*d)),sl=sin(angles.y),cl=cos(angles.y);
         float lat=asin(clamp(q.y*cl+z*sl,-1.,1.));
