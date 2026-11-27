@@ -112,7 +112,7 @@
     </script>
     
 <link rel="preload" as="image" type="image/avif" href="imagery/earth-2k.avif" fetchpriority="high">
-<link rel="stylesheet" href="flight.css?v=compact-1"><link rel="stylesheet" href="notebook.css?v=record-type-1"><script defer src="flight.js?v=graphite-1"></script></head>
+<link rel="stylesheet" href="flight.css?v=compact-1"><link rel="stylesheet" href="notebook.css?v=fieldbook-1"><script defer src="flight.js?v=fieldbook-1"></script></head>
 <body><a class="skip" href="#notebook">Skip to selected work</a>
 <header class="masthead">
   <a class="signature" href="#flight">Yalin Yang</a>
@@ -168,17 +168,17 @@
   <div class="collection-head"><h2 id="notebook-title">Selected work</h2><a href="https://gisyaliny.github.io/projects/" target="_blank" rel="noopener noreferrer">Project archive ↗</a></div>
   <article id="projects" class="cover-project"><span id="wvfrf"></span>
     <div class="lead-story">
-      <div class="lead-copy"><span class="discipline">Web GIS · West Virginia GIS Technical Center</span>
+      <div class="lead-copy"><span class="discipline">Full-stack development · WVU GIS Technical Center</span>
         <h3>West Virginia Flood Resiliency Framework</h3>
-        <p>I built the entire website, front end and back end, to turn flood-risk data from our data scientists into maps and reports that communities can use.</p>
+        <p>I built the front end and back end for this statewide website, turning our data scientists’ flood-risk estimates into maps and reports that communities can explore by county.</p>
         <a class="product-link" href="https://wvfrf.org/" target="_blank" rel="noopener noreferrer">Explore WVFRF ↗</a>
       </div>
       <figure class="county-guide">
-        <figcaption>How many buildings are exposed in Wetzel County?</figcaption>
+        <figcaption>How many buildings are in Wetzel County’s high-risk flood zone?</figcaption>
         <ol class="county-steps">
           <li><h4><span>01</span> Select a county</h4><img src="portfolio/wetzel-county.svg" width="380" height="280" loading="lazy" alt="Wetzel County highlighted in gold on a map of West Virginia."></li>
           <li><h4><span>02</span> Read the indicator</h4><strong>1,571</strong><p>buildings in the high-risk flood zone</p><p class="county-share"><b>15.6%</b> of all buildings in the county</p></li>
-          <li><h4><span>03</span> Open the report</h4><a href="https://wvfrf.org/wvre/report/?entityid=52&amp;scaleid=3&amp;type=all" target="_blank" rel="noopener noreferrer">Wetzel County risk report ↗</a></li>
+          <li><h4><span>03</span> <a href="https://wvfrf.org/wvre/report/?entityid=52&amp;scaleid=3&amp;type=all" target="_blank" rel="noopener noreferrer">View the Wetzel County report ↗</a></h4></li>
         </ol>
         <small>Source: WV Risk Explorer, November 2026 · County boundaries: U.S. Census Bureau</small>
       </figure>
@@ -187,19 +187,22 @@
   <section id="work" aria-labelledby="engineering-title"><h3 id="engineering-title" class="shelf-heading">GIS &amp; GeoAI projects</h3>
     <div class="engineering-shelf">
       <article id="prithvi"><a class="engineering-card" href="https://gisyaliny.github.io/projects/Research/GEOAI-Model-Transformation/instruction/" aria-labelledby="prithvi-title prithvi-link" target="_blank" rel="noopener noreferrer">
-        <figure><div class="engineering-plate image-pair"><img src="portfolio/prithvi-hls.webp" width="418" height="413" loading="lazy" alt="HLS satellite input"><span aria-hidden="true">→</span><img src="portfolio/prithvi-mask.webp" width="419" height="413" loading="lazy" alt="Matching prediction from the Team 6 presentation, with burned pixels in white"></div>
+        <figure><div class="engineering-plate image-pair">
+          <div class="image-sample"><img src="portfolio/prithvi-hls.webp" width="418" height="413" loading="lazy" alt="Six-band HLS scene shown in false color"><span>Satellite image</span></div>
+          <div class="image-sample"><img src="portfolio/prithvi-mask.webp" width="419" height="413" loading="lazy" alt="Team 6 prediction with burned pixels in white"><span>Burn-scar mask</span></div>
+        </div>
         <figcaption><p class="engineering-type">GeoAI · I-GUIDE Team 6</p><h4 id="prithvi-title">Prithvi burn-scar mapping</h4>
-        <p class="card-summary">I deployed Prithvi-100M on I-GUIDE and ran the fine-tuning pipeline that turns six-band satellite imagery into burn-scar masks.</p></figcaption></figure>
+        <p class="card-summary">I deployed and ran our team’s Prithvi fine-tuning pipeline on I-GUIDE to map burn scars from six-band satellite imagery.</p></figcaption></figure>
         <span class="engineering-link" id="prithvi-link">View project ↗</span></a></article>
       <article id="river-profiles"><a class="engineering-card" href="https://gisyaliny.github.io/projects/Research/Add-in-plug-in-Development-For-Dislocated-Water-System-Extraction/intro/" aria-labelledby="river-profiles-title river-profiles-link" target="_blank" rel="noopener noreferrer">
-        <figure><div class="engineering-plate river-plate"><img src="portfolio/river-transect.svg" width="600" height="205" loading="lazy" alt="The highlighted A–B transect across the river corresponds to the valley profile at right."></div>
+        <figure><div class="engineering-plate river-plate"><img src="portfolio/river-transect.svg?v=fieldbook-1" width="260" height="150" loading="lazy" alt="The gold A–B line crosses a river valley. The curve beside it shows elevation along that line."></div>
         <figcaption><p class="engineering-type">C# · ArcMap</p><h4 id="river-profiles-title">River valley profile add-in</h4>
         <p class="card-summary">I extended a C# ArcMap add-in so researchers can trace valley floors and extract cross-sections from LiDAR elevation grids.</p></figcaption></figure>
         <span class="engineering-link" id="river-profiles-link">View implementation ↗</span></a></article>
       <article id="footprints"><a class="engineering-card" href="https://gisyaliny.github.io/files/research/GPS%20App%20instructions.pdf" aria-labelledby="footprints-title footprints-link" target="_blank" rel="noopener noreferrer">
-        <figure><div class="engineering-plate gps-plate"><img src="portfolio/footprints-flow.svg" width="500" height="190" loading="lazy" alt="A participant’s phone sends encrypted GPS updates to the study database."></div>
+        <figure><div class="engineering-plate gps-plate"><img src="portfolio/footprints-flow.svg?v=fieldbook-1" width="260" height="150" loading="lazy" alt="A GPS track recorded on an Android phone is sent to the study’s AWS backend."></div>
         <figcaption><p class="engineering-type">Android · AWS</p><h4 id="footprints-title">Footprints GPS collection</h4>
-        <p class="card-summary">I built the Android recorder and AWS backend that let study participants share GPS updates and pause recording whenever they choose.</p></figcaption></figure>
+        <p class="card-summary">I built the Android app and AWS backend so participants can record GPS tracks and pause sharing in the field.</p></figcaption></figure>
         <span class="engineering-link" id="footprints-link">Read field guide (PDF) ↗</span></a></article>
     </div>
   </section>

@@ -1,30 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 205" role="img" aria-labelledby="title desc">
-  <title id="title">From a river transect to its elevation profile</title>
-  <desc id="desc">Conceptual illustration of the ArcMap add-in. Three lines cross a river. The gold A to B line corresponds to the profile at right. Shapes illustrate the method without measured terrain values.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 150" role="img" aria-labelledby="title desc">
+  <title id="title">A river valley in plan and profile</title>
+  <desc id="desc">A schematic transect across a blue river corresponds to the gold elevation curve on the right.</desc>
   <defs>
-    <clipPath id="map"><rect x="12" y="40" width="244" height="157"/></clipPath>
-    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#36617a" stroke-width=".7"/></pattern>
+    <clipPath id="map"><rect x="5" y="7" width="135" height="136" rx="3"/></clipPath>
+    <pattern id="contours" width="128" height="160" patternUnits="userSpaceOnUse" patternTransform="rotate(13)">
+      <path d="M0-32Q42 0 16 47T14 135T21 192 M12-32Q54 0 28 47T26 135T33 192 M26-32Q68 0 42 47T40 135T47 192 M43-32Q85 0 59 47T57 135T64 192 M60-32Q102 0 76 47T74 135T81 192 M78-32Q120 0 94 47T92 135T99 192 M102-32Q144 0 118 47T116 135T123 192" fill="none" stroke="#588597" stroke-width="1.4"/>
+    </pattern>
   </defs>
-  <rect width="600" height="205" fill="#092d4a"/>
-  <g fill="#f4f4eb" font-size="19" font-family="Palatino Linotype,Georgia,serif">
-    <text x="18" y="27">River transects</text><text x="317" y="27">Elevation along A–B</text>
-  </g>
+  <rect width="260" height="150" fill="#092d4a"/>
   <g clip-path="url(#map)">
-    <rect x="12" y="40" width="244" height="157" fill="#16435b"/>
-    <g fill="none" stroke="#6291a1" stroke-width="1.3">
-      <path id="bank" d="M25 214Q30 170 62 152T92 108Q94 89 120 78T157 33"/>
-      <use href="#bank" transform="translate(-18)"/><use href="#bank" transform="translate(-36)"/><use href="#bank" transform="translate(-54)"/>
-      <path id="slope" d="M104 214Q107 176 139 157T167 113Q168 103 185 95T231 33"/>
-      <use href="#slope" transform="translate(16)"/><use href="#slope" transform="translate(33)"/><use href="#slope" transform="translate(50)"/>
-    </g>
-    <path d="M73 207Q69 182 101 158T133 114Q129 98 154 89T200 35" fill="none" stroke="#9ddae6" stroke-width="6"/>
-    <g stroke="#dbe4e3" stroke-width="1.8"><path d="M116 54l70 52M61 143l71 52"/></g>
-    <path d="M90 88l91 66" stroke="#ffc52b" stroke-width="3"/>
+    <rect width="145" height="150" fill="#184559"/><rect width="145" height="150" fill="url(#contours)"/>
+    <path d="M103-8C63 29 90 42 70 69S61 112 29 155" fill="none" stroke="#0c354a" stroke-width="12"/>
+    <path d="M103-8C63 29 90 42 70 69S61 112 29 155" fill="none" stroke="#80d8ec" stroke-width="5"/>
+    <path d="m18 60 105 28" stroke="#ffe080" stroke-width="3"/>
+    <g fill="#ffe080" stroke="#092d4a" stroke-width="1.6"><circle cx="18" cy="60" r="4"/><circle cx="123" cy="88" r="4"/></g>
   </g>
-  <g fill="#ffcc42" font-size="16" font-family="Arial,sans-serif"><text x="76" y="88">A</text><text x="185" y="166">B</text></g>
-  <path d="M269 117h30m-8-7 8 7-8 7" fill="none" stroke="#eaaa00" stroke-width="2"/>
-  <rect x="315" y="45" width="267" height="120" fill="url(#grid)"/>
-  <path d="M315 46v119h267" fill="none" stroke="#8db4c4"/>
-  <path d="M316 67l24 8 21 16 24 7 23 18 19 5 22 23 13 4 19-17 17-8 21-24 20-10 20-18 22-7" fill="none" stroke="#ffc52b" stroke-width="3.3" stroke-linejoin="round"/>
-  <g fill="#f1f6f4" font-family="Arial,sans-serif" font-size="14"><text x="314" y="186">A</text><text x="379" y="186">Distance along section</text><text x="575" y="186">B</text></g>
+  <g fill="#ffe080" font-family="Arial,sans-serif" font-size="14" font-weight="bold"><text x="12" y="52">A</text><text x="119" y="81">B</text></g>
+  <g fill="none" stroke="#466677" stroke-width="1"><path d="M151 47h101m-101 28h101m-101 28h101"/></g>
+  <path d="M152 43c13 3 18 14 25 36s9 29 17 29c12 0 15-15 20-23s9-9 15-22 14-14 22-27v82h-99z" fill="#25495a"/>
+  <path d="M152 43c13 3 18 14 25 36s9 29 17 29c12 0 15-15 20-23s9-9 15-22 14-14 22-27" fill="none" stroke="#ffce59" stroke-width="3.4" stroke-linecap="round"/>
+  <g fill="#dbe6e5" font-family="Arial,sans-serif" font-size="13"><text x="149" y="134">A</text><text x="244" y="134">B</text></g>
 </svg>

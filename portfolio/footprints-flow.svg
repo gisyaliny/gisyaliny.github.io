@@ -1,21 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 190" role="img" aria-labelledby="title desc">
-  <title id="title">Recording GPS locations with Footprints</title>
-  <desc id="desc">A schematic phone sends encrypted location updates to storage for the research team. The dots illustrate a route.</desc>
-  <rect width="500" height="190" fill="#142e42"/>
-  <g stroke-linecap="round" stroke-linejoin="round">
-    <rect x="48" y="16" width="84" height="133" rx="13" fill="#082136" stroke="#adcfdb" stroke-width="2.5"/>
-    <rect x="56" y="32" width="68" height="97" rx="4" fill="#284a5b"/>
-    <path d="M56 56l68 16M56 81l68 18M76 32l-9 97m34-97-6 97" stroke="#4f7180" fill="none"/>
-    <path d="M66 114l10-27 18 6 20-39" fill="none" stroke="#f3bd3b" stroke-width="3"/>
-    <g fill="#ffd15f"><circle cx="66" cy="114" r="3.7"/><circle cx="76" cy="87" r="3.7"/><circle cx="94" cy="93" r="3.7"/><circle cx="114" cy="54" r="3.7"/></g>
-    <path d="M81 140h18M84 24h14" stroke="#b7d9df" stroke-width="2"/>
-    <path d="M149 89h62m58 0h72m-10-7 10 7-10 7" fill="none" stroke="#edb432" stroke-width="2.5"/>
-    <rect x="222" y="78" width="35" height="29" rx="4" fill="#173a4e" stroke="#bae0e8" stroke-width="2.5"/>
-    <path d="M229 77v-8a10.5 10.5 0 0 1 21 0v8" fill="none" stroke="#bae0e8" stroke-width="2.5"/>
-    <circle cx="239.5" cy="90" r="3" fill="#f4c03f"/>
-    <path d="M362 62v54c0 19 79 19 79 0V62" fill="#255265" stroke="#a7d1db" stroke-width="2.5"/>
-    <ellipse cx="401.5" cy="62" rx="39.5" ry="12" fill="#396479" stroke="#a7d1db" stroke-width="2.5"/>
-    <path d="M362 80c0 18 79 18 79 0m-79 18c0 18 79 18 79 0" fill="none" stroke="#82b5c3" stroke-width="2"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 150" role="img" aria-labelledby="title desc">
+  <title id="title">Footprints GPS collection</title>
+  <desc id="desc">A gold track on an Android phone flows into AWS storage.</desc>
+  <rect width="260" height="150" fill="#142e42"/>
+  <g stroke-linejoin="round" stroke-linecap="round">
+    <rect x="22" y="7" width="71" height="136" rx="11" fill="#091d2b" stroke="#9abfc8" stroke-width="2"/>
+    <rect x="27" y="21" width="61" height="107" rx="3" fill="#26505c"/>
+    <path d="m27 34 61 20m-61 2 61 19m-61 5 61 18m-61 6 53 17M43 22l-8 104m28-104-8 105m28-105-8 105" fill="none" stroke="#50757c" stroke-width="1.3"/>
+    <path d="m39 111 7-27 13-9-3-17 14 4 7-27" fill="none" stroke="#ffd05c" stroke-width="3.5"/>
+    <circle cx="39" cy="111" r="3.5" fill="#ffd05c"/><circle cx="77" cy="35" r="6" fill="#fff3c8" stroke="#eaaa00" stroke-width="2"/>
+    <path d="M48 14h18m-19 121h20" fill="none" stroke="#86a7b2" stroke-width="2"/>
+    <path d="M106 76h50m-9-8 9 8-9 8" stroke="#ffd05c" stroke-width="3" fill="none"/>
+    <path d="M168 48v50c0 20 71 20 71 0V48" fill="#205064" stroke="#8bc3cc" stroke-width="2"/>
+    <ellipse cx="203.5" cy="48" rx="35.5" ry="10" fill="#306777" stroke="#a6d8dc" stroke-width="2"/>
+    <path d="M169 92c8 12 59 12 69 0" fill="none" stroke="#568c99" stroke-width="1.5"/>
+    <text x="204" y="84" text-anchor="middle" fill="#fff2cd" font-family="Arial,sans-serif" font-weight="bold" font-size="21">AWS</text>
   </g>
-  <g fill="#f6f1df" font-family="Arial,sans-serif" font-size="17" text-anchor="middle"><text x="90" y="174">GPS fixes</text><text x="240" y="145" fill="#b6d5dc">Encrypted upload</text><text x="401" y="155">Study records</text></g>
 </svg>

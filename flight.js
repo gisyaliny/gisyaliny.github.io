@@ -51,7 +51,7 @@
     campus.style.opacity = String(smooth((zoomFraction - 1 / overscan) / .20));
   }
   const images = [];
-  let pending = 0, previousStop = -1;
+  let pending = 0, previousStop = -1, landed = false;
 
   // Only the imagery inside each georeferenced footprint is sampled. Adjacent
   // resolutions overlap, keeping a feature in place as its fine detail appears.
@@ -297,7 +297,8 @@
     const r=cameraRadius(p,first,final);
     // Start over China and turn east across the Pacific. -255° is 105° E.
     const lon=mix(-255*rad,target.lon,turn),lat=mix(33*rad,target.lat,turn)+.24*Math.sin(Math.PI*turn);
-    const x=w*(mobile?.5:.67),y=h*(mobile?.65:.51);
+    const openingOffset = view.clientWidth >= 1100 ? Math.min(55, view.clientWidth * .038) : 0;
+    const x=w*(mobile?.5:.67)+openingOffset*ratio*(1-turn),y=h*(mobile?.65:.51);
     updateCampus(p,r/final,mobile);
     if(p>.08){
       const projected=spans.map(span=>r*Math.cos(target.lat)*span/earthRadius);
@@ -323,8 +324,11 @@
       changeCaption(stop,previous);
       chapters[0].parentElement.style.setProperty('--chapter-index', stop);
       chapters.forEach((tab,i)=>i===stop?tab.setAttribute('aria-current','step'):tab.removeAttribute('aria-current'));
-      document.getElementById('jump-label').textContent=stop===3?'Back to first light':'Follow the current';
-      document.getElementById('arrow').textContent=stop===3?'↑':'↓';
+    }
+    if (landed !== (p >= .99)) {
+      landed = p >= .99;
+      view.toggleAttribute('data-landed', landed);
+      document.getElementById('jump-label').textContent = landed ? 'Meet Yalin' : 'Follow the current';
     }
     view.style.setProperty('--p',p);view.style.setProperty('--shadow',mix(.05,.90,smooth((p-.19)/.30)));
   }
@@ -333,7 +337,16 @@
     const start=scrollY+route.getBoundingClientRect().top;
     window.scrollTo({top:start+(route.offsetHeight-view.clientHeight)*fraction,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
   }
-  jump.addEventListener('click',()=>seek(Number(chapters[(previousStop+1)%chapters.length].dataset.at)));
+  jump.addEventListener('click', () => {
+    if (landed) {
+      const heading = document.getElementById('bio-title');
+      heading.setAttribute('tabindex', '-1');
+      heading.focus({preventScroll:true});
+      document.getElementById('about').scrollIntoView({behavior:reducedMotion.matches?'instant':'smooth'});
+    } else {
+      seek(Number(chapters[Math.min(previousStop + 1, chapters.length - 1)].dataset.at));
+    }
+  });
   chapters.forEach(tab=>tab.addEventListener('click',()=>seek(Number(tab.dataset.at))));
   reducedMotion.addEventListener('change',schedule);
   window.addEventListener('scroll',schedule,{passive:true});new ResizeObserver(schedule).observe(view);schedule();
